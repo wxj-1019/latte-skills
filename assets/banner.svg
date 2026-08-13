@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1b1410"/>
+      <stop offset="0.55" stop-color="#241a12"/>
+      <stop offset="1" stop-color="#0f0c09"/>
+    </linearGradient>
+    <linearGradient id="cup" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6efe3"/>
+      <stop offset="1" stop-color="#cdb79a"/>
+    </linearGradient>
+    <radialGradient id="latte" cx="0.5" cy="0.4" r="0.6">
+      <stop offset="0" stop-color="#c08a4f"/>
+      <stop offset="0.7" stop-color="#8a5526"/>
+      <stop offset="1" stop-color="#6b3f1d"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f0d28a"/>
+      <stop offset="0.5" stop-color="#e3b45a"/>
+      <stop offset="1" stop-color="#c98f2c"/>
+    </linearGradient>
+    <linearGradient id="steam" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#e8c987" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#f0d9a0" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#f6efe3" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.4"/>
+    </filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="960" height="300" rx="22" fill="url(#bg)"/>
+  <!-- subtle dotted texture -->
+  <g fill="#ffffff" opacity="0.03">
+    <circle cx="60" cy="40" r="1.2"/><circle cx="120" cy="260" r="1.2"/><circle cx="900" cy="50" r="1.2"/>
+    <circle cx="820" cy="250" r="1.2"/><circle cx="500" cy="30" r="1.2"/><circle cx="700" cy="270" r="1.2"/>
+  </g>
+
+  <!-- ===== Coffee cup ===== -->
+  <g transform="translate(96,118)">
+    <ellipse cx="92" cy="126" rx="116" ry="15" fill="#000" opacity="0.35"/>
+    <!-- saucer -->
+    <ellipse cx="92" cy="118" rx="112" ry="17" fill="#efe3cf"/>
+    <ellipse cx="92" cy="115" rx="96" ry="13" fill="#cdb79a"/>
+    <!-- handle -->
+    <path d="M166,30 q40,4 40,40 q0,40 -44,44" fill="none" stroke="#efe3cf" stroke-width="15" stroke-linecap="round"/>
+    <path d="M166,30 q40,4 40,40 q0,40 -44,44" fill="none" stroke="#cdb79a" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+    <!-- cup body -->
+    <path d="M16,8 Q14,98 92,104 Q170,98 168,8 Z" fill="url(#cup)"/>
+    <path d="M30,16 Q30,90 92,96" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.5"/>
+    <!-- coffee surface -->
+    <ellipse cx="92" cy="8" rx="76" ry="15" fill="url(#latte)"/>
+    <ellipse cx="92" cy="7" rx="76" ry="15" fill="none" stroke="#a06a36" stroke-width="1.5" opacity="0.5"/>
+    <!-- latte art: rosetta/leaf in cream -->
+    <g fill="#f6efe3" opacity="0.95" filter="url(#soft)">
+      <path d="M92,-7 c-7,-11 -22,-7 -22,4 c0,9 12,15 22,24 c10,-9 22,-15 22,-24 c0,-11 -15,-15 -22,-4 Z"/>
+      <path d="M92,16 c-3,-5 -10,-3 -10,2 c0,5 6,9 10,13 c4,-4 10,-8 10,-13 c0,-5 -7,-7 -10,-2 Z" opacity="0.9"/>
+    </g>
+  </g>
+
+  <!-- ===== Steam (animated) ===== -->
+  <g fill="none" stroke="url(#steam)" stroke-width="7" stroke-linecap="round">
+    <path d="M150,110 q16,-22 0,-44 q-16,-22 0,-44" opacity="0.85">
+      <animateTransform attributeName="transform" type="translate" values="0,6; 0,-10; 0,6" dur="3.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.15;0.9;0.15" dur="3.2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M188,112 q16,-22 0,-44 q-16,-22 0,-44" opacity="0.85">
+      <animateTransform attributeName="transform" type="translate" values="0,6; 0,-12; 0,6" dur="3.8s" begin="0.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.15;0.95;0.15" dur="3.8s" begin="0.4s" repeatCount="indefinite"/>
+    </path>
+    <path d="M226,110 q16,-22 0,-44 q-16,-22 0,-44" opacity="0.85">
+      <animateTransform attributeName="transform" type="translate" values="0,6; 0,-10; 0,6" dur="3.5s" begin="0.9s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="3.5s" begin="0.9s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- ===== Wordmark ===== -->
+  <g transform="translate(392,158)">
+    <text x="0" y="0" font-size="76" font-weight="800" fill="url(#gold)" filter="url(#glow)">latte</text>
+    <text x="183" y="0" font-size="76" font-weight="200" fill="#f6efe3">-skills</text>
+    <line x1="2" y1="22" x2="372" y2="22" stroke="#e3b45a" stroke-width="2" opacity="0.4"/>
+    <text x="3" y="52" font-size="20" fill="#b9a98c" letter-spacing="3.5">SKILLS · BREWED FOR YOUR AI</text>
+  </g>
+
+  <!-- corner steam dots -->
+  <g fill="#e3b45a" opacity="0.5">
+    <circle cx="900" cy="250" r="2"><animate attributeName="opacity" values="0.1;0.7;0.1" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="860" cy="270" r="1.5"><animate attributeName="opacity" values="0.1;0.7;0.1" dur="4.5s" begin="1s" repeatCount="indefinite"/></circle>
+  </g>
+</svg>
