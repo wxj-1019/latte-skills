@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/brews-13-%23c98f2c"></a>
+  <a href="#"><img src="https://img.shields.io/badge/brews-14-%23c98f2c"></a>
   <a href="#"><img src="https://img.shields.io/badge/ZCode%20%C2%B7%20Claude%20Code%20%C2%B7%20Codex-compatible-success"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT%20(self--built)-blue"></a>
   <a href="https://github.com/wxj-1019/latte-skills/commits"><img src="https://img.shields.io/github/last-commit/wxj-1019/latte-skills"></a>
@@ -93,10 +93,14 @@ cp -r latte-skills/frontend/frontend-design ~/.zcode/skills/
 | `vercel-agent-skills` | React best practices + composition patterns |
 | `skill-orchestrator` | Detailed decision tree and pipelines |
 
+### 🧰 `general/` — General-purpose skills
+
+| Blend | Strength | Flavor |
+|---|:---:|---|
+| **readme-makeover** | ☕☕ | Turn a bland/templated README into a branded, hero-led, scannable landing page: mine a brand metaphor → animated SVG banner → badges → strong structure → LICENSE/.gitattributes. See `general/readme-makeover/` (this very README was brewed with it ☕) |
+
 <!--
-Future shelves:
-### 🛠️ backend/
-### 🧪 general/
+Future shelves: ### 🛠️ backend/
 -->
 
 ---
@@ -135,7 +139,9 @@ latte-skills/
 │   ├── make-interfaces-feel-better/  ☕ micro-details
 │   ├── web-design-guidelines/   ☕ Vercel review
 │   └── frontend-skills-hub/     ← routing hub + 7 house blends
-└── (future: backend/  general/  …)
+├── general/                ← general-purpose shelf
+│   └── readme-makeover/        ☕☕ README makeover (SKILL.md + references/)
+└── (future: backend/  …)
 ```
 
 ---

@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/brews-13-%23c98f2c"></a>
+  <a href="#"><img src="https://img.shields.io/badge/brews-14-%23c98f2c"></a>
   <a href="#"><img src="https://img.shields.io/badge/ZCode%20%C2%B7%20Claude%20Code%20%C2%B7%20Codex-compatible-success"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT%20(self--built)-blue"></a>
   <a href="https://github.com/wxj-1019/latte-skills/commits"><img src="https://img.shields.io/github/last-commit/wxj-1019/latte-skills"></a>
@@ -93,10 +93,14 @@ cp -r latte-skills/frontend/frontend-design ~/.zcode/skills/
 | `vercel-agent-skills` | React 实践 + 组件模式（工程化质量） |
 | `skill-orchestrator` | 详细决策树与流水线 |
 
+### 🧰 `general/` — 通用技能
+
+| 拼配 | 浓度 | 风味 |
+|---|:---:|---|
+| **readme-makeover** | ☕☕ | 把平庸/模板化的 README 改造成有品牌、有主视觉、可扫读的落地页：挖品牌隐喻 → 动画 SVG 招牌 → 徽章 → 强结构 → LICENSE/.gitattributes。详见 `general/readme-makeover/`（本 README 即由它出品 ☕） |
+
 <!--
-未来拼配柜：
-### 🛠️ backend/
-### 🧪 general/
+未来拼配柜：### 🛠️ backend/
 -->
 
 ---
@@ -135,7 +139,9 @@ latte-skills/
 │   ├── make-interfaces-feel-better/  ☕ 交互细节
 │   ├── web-design-guidelines/   ☕ Vercel 规范校验
 │   └── frontend-skills-hub/     ← 选路中心 + 7 杯自烘拼配
-└── （未来: backend/  general/  …）
+├── general/                ← 通用拼配柜
+│   └── readme-makeover/        ☕☕ README 改造术（SKILL.md + references/）
+└── （未来: backend/  …）
 ```
 
 ---
