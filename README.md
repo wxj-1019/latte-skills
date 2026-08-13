@@ -8,11 +8,14 @@
 
 [![skills](https://img.shields.io/badge/skills-13-blue)]()
 [![platforms](https://img.shields.io/badge/ZCode%20·%20Claude%20Code%20·%20Codex-compatible-success)]()
+[![license](https://img.shields.io/badge/license-MIT%20(self--built)-blue)](LICENSE)
 [![last commit](https://img.shields.io/github/last-commit/wxj-1019/latte-skills)](https://github.com/wxj-1019/latte-skills/commits)
 [![stars](https://img.shields.io/github/stars/wxj-1019/latte-skills?style=social)](https://github.com/wxj-1019/latte-skills)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)]()
 
 </div>
+
+> 🌐 [English](README.en.md) · 简体中文
 
 一份可克隆、可分发的个人技能库。每个技能都是一个带 `SKILL.md` 的文件夹，复制到任意 AI 工具的技能目录即可使用。当前收录 **前端设计** 分类（13 个技能），后续将持续补充其它分类。
 
@@ -169,7 +172,7 @@ git add -A && git commit -m "feat: 添加 <技能名>" && git push
 | `impeccable` | Apache 2.0 |
 | 其余上游技能 | 见各上游仓库 LICENSE |
 
-`frontend-skills-hub/` 及其中 7 个策展技能为自建内容。
+本仓库的**自建内容**（`frontend-skills-hub/` 及其 7 个策展技能、README、仓库脚手架）采用 **MIT 许可证**（见根目录 [LICENSE](LICENSE)）；`frontend/` 下的上游技能保留各自原始许可证。
 
 ---
 
