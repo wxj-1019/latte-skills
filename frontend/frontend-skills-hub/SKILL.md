@@ -77,7 +77,7 @@ description: Use when doing frontend/UI design work and unsure which design skil
 - ❌ 别跳过 `accesslint` 直接交付
 - ❌ 别把 `ui-ux-pro-max` 的 `data/*.csv` 全量载入（用 `scripts/search.py --domain` 按需查询；本机 Python 走 `py -3`）
 - ❌ 别在 `bencium` Controlled 模式下用 `frontend-design`
-- ✅ `impeccable` 已编译到 v4.0.4：模板变量全部解析，脚本路径为本机绝对路径，`node` 可直接调用
+- ✅ `impeccable` 已编译到 v4.0.4：模板变量全部解析为 `<skill-base-dir>` 约定（脚本可移植、不写死本机路径），`node` 可直接调用
 - ⚠️ `vercel-agent-skills/` 内的 web-design-guidelines.md 已去重为指针，权威原版在顶层 `web-design-guidelines`
 
 ---

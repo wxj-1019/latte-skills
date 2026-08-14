@@ -1,0 +1,11 @@
+# ---- Logs & runtime artifacts ----
+logs/
+*.log
+
+# ---- Python bytecode caches ----
+__pycache__/
+*.py[cod]
+
+# ---- OS junk ----
+.DS_Store
+Thumbs.db
