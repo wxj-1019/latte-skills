@@ -79,7 +79,7 @@ cp -r latte-skills/frontend/frontend-design ~/.zcode/skills/
 
 ## Full Menu
 
-### 🎨 `frontend/` — Frontend Design (14 brews)
+### <img src="assets/icons/screen.svg" width="16"> `frontend/` — Frontend Design (14 brews)
 
 **House blends** (inside `frontend-skills-hub/`, self-roasted):
 
@@ -94,7 +94,7 @@ cp -r latte-skills/frontend/frontend-design ~/.zcode/skills/
 | `vercel-agent-skills` | React best practices + composition patterns |
 | `skill-orchestrator` | Detailed decision tree and pipelines |
 
-### 🧰 `general/` — General-purpose skills
+### <img src="assets/icons/tool.svg" width="16"> `general/` — General-purpose skills
 
 | Blend | Strength | Flavor |
 |---|:---:|---|

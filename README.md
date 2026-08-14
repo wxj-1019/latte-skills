@@ -79,7 +79,7 @@ cp -r latte-skills/frontend/frontend-design ~/.zcode/skills/
 
 ## 完整菜单 · Full Menu
 
-### 🎨 `frontend/` — 前端设计（14 杯）
+### <img src="assets/icons/screen.svg" width="16"> `frontend/` — 前端设计（14 杯）
 
 **店藏拼配**（`frontend-skills-hub/` 内，自烘）：
 
@@ -94,7 +94,7 @@ cp -r latte-skills/frontend/frontend-design ~/.zcode/skills/
 | `vercel-agent-skills` | React 实践 + 组件模式（工程化质量） |
 | `skill-orchestrator` | 详细决策树与流水线 |
 
-### 🧰 `general/` — 通用技能
+### <img src="assets/icons/tool.svg" width="16"> `general/` — 通用技能
 
 | 拼配 | 浓度 | 风味 |
 |---|:---:|---|
