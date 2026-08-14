@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/brews-15-%23c98f2c"></a>
+  <a href="#"><img src="https://img.shields.io/badge/brews-14-%23c98f2c"></a>
   <a href="#"><img src="https://img.shields.io/badge/ZCode%20%C2%B7%20Claude%20Code%20%C2%B7%20Codex-compatible-success"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT%20(self--built)-blue"></a>
   <a href="https://github.com/wxj-1019/latte-skills/commits"><img src="https://img.shields.io/github/last-commit/wxj-1019/latte-skills"></a>
@@ -79,20 +79,19 @@ cp -r latte-skills/frontend/frontend-design ~/.zcode/skills/
 
 ## Full Menu
 
-### <img src="assets/icons/screen.svg" width="16"> `frontend/` — Frontend Design (14 brews)
+### <img src="assets/icons/screen.svg" width="16"> `frontend/` — Frontend Design (13 brews)
 
-**House blends** (inside `frontend-skills-hub/`, self-roasted):
+**House blends** (self-roasted, flattened to `frontend/` top level; `frontend-skills-hub/` is routing only):
 
 | Blend | Flavor |
 |---|---|
-| `frontend-skills-hub` | Routing hub: scenario → skill + pipelines |
+| `frontend-skills-hub` | Routing hub: scenario → skill + pipelines + decision tree |
 | `theme-factory` | 10 ready-to-use CSS themes |
 | `bencium` | Design-constraint toggle (Controlled / Innovative) |
 | `accesslint` | WCAG 2.2 AA/AAA accessibility compliance |
 | `interface-design` | Design-system persistence, enforced tokens |
 | `gsap-skill` | GSAP animation system |
 | `vercel-agent-skills` | React best practices + composition patterns |
-| `skill-orchestrator` | Detailed decision tree and pipelines |
 
 ### <img src="assets/icons/tool.svg" width="16"> `general/` — General-purpose skills
 
@@ -133,7 +132,7 @@ See each `SKILL.md` `description` field (the ordering code).
 latte-skills/
 ├── assets/banner.svg        ← shop sign (animated hero)
 ├── README.md  /  README.en.md  /  LICENSE (MIT)
-├── frontend/                ← frontend shelf (14 brews)
+├── frontend/                ← frontend shelf (13 brews)
 │   ├── frontend-design/         ☕☕ visual direction
 │   ├── design-taste-frontend/   ☕☕ landing/portfolio
 │   ├── ui-ux-pro-max/           ☕☕☕ knowledge base (data/ references/ scripts/)
@@ -141,7 +140,13 @@ latte-skills/
 │   ├── make-interfaces-feel-better/  ☕ micro-details
 │   ├── bklit-ui/                ☕ chart components (SKILL.md + rules/)
 │   ├── web-design-guidelines/   ☕ Vercel review
-│   └── frontend-skills-hub/     ← routing hub + 7 house blends
+│   ├── theme-factory/           ☕ 10 CSS themes (self-roasted)
+│   ├── bencium/                 ☕ design constraints (self-roasted)
+│   ├── accesslint/              ☕ accessibility (self-roasted)
+│   ├── interface-design/        ☕ token persistence (self-roasted)
+│   ├── gsap-skill/              ☕ GSAP animation (self-roasted)
+│   ├── vercel-agent-skills/     ☕ engineering quality (self-roasted)
+│   └── frontend-skills-hub/     ← routing hub (no nested skills)
 ├── general/                ← general-purpose shelf
 │   └── readme-makeover/        ☕☕ README makeover (SKILL.md + references/)
 └── (future: backend/  …)
@@ -182,7 +187,7 @@ Every bean is sourced from an open-source estate and keeps its origin license:
 | `bklit-ui` | MIT |
 | other upstream beans | see each origin's LICENSE |
 
-The **self-roasted content** — `frontend-skills-hub/` and its 7 blends, the READMEs, the shop sign, and scaffolding — is **MIT-licensed** (see root [LICENSE](LICENSE)). Upstream beans under `frontend/` keep their own licenses.
+The **self-roasted content** — `frontend-skills-hub/` and its 6 blends, the READMEs, the shop sign, and scaffolding — is **MIT-licensed** (see root [LICENSE](LICENSE)). Upstream beans under `frontend/` keep their own licenses.
 
 ---
 

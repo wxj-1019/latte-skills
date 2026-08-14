@@ -5,7 +5,7 @@ description: Use when doing frontend/UI design work and unsure which design skil
 
 # 🧭 前端技能调度中心
 
-> 前端技能的选路入口。7 款上游设计技能已**拍平为顶层 skill**（可被 ZCode 直接调用）；本 hub 另托管 7 个策展技能并负责选路。
+> 前端技能的选路入口。7 款上游设计技能与 6 款自烘策展技能均已**拍平为顶层 skill**（可被 ZCode 直接调用）；本 hub 是唯一选路中心，内嵌决策树与流水线。
 
 ---
 
@@ -23,17 +23,16 @@ description: Use when doing frontend/UI design work and unsure which design skil
 | 📊 图表/数据可视化 | `bklit-ui` | 14 类图表按 @bklit registry 安装；组合/主题/动画规则含正误示例 |
 | ✅ 交付前规范校验 | `web-design-guidelines` | Vercel Web 规范合规审查（运行时拉取最新规则） |
 
-### 🗂️ 策展技能（本 hub 内）
+### 🗂️ 策展技能（已展平到 `frontend/` 顶层，与本 hub 同级）
 
 | 你想做什么？ | 用什么技能 | 一句话说明 |
 |-------------|-----------|-----------|
-| 🎭 快速套主题 | [theme-factory](theme-factory/SKILL.md) | 10 套开箱即用 CSS 主题 |
-| 🔒 约束设计规范 | [bencium](bencium/SKILL.md) | Controlled（收紧）/ Innovative（放开） |
-| ⚙️ 代码质量 | [vercel-agent-skills](vercel-agent-skills/SKILL.md) | React 实践 + Web 规范 + 组件模式 |
-| ♿ 无障碍检查 | [accesslint](accesslint/SKILL.md) | WCAG 2.2 AA/AAA 合规 |
-| 🏗️ 设计系统持久化 | [interface-design](interface-design/SKILL.md) | Token 强制 + 防设计债 |
-| 🎬 动画引擎 | [gsap-skill](gsap-skill/overview.md) | GSAP 8 模块体系 |
-| 🧠 调度指南 | [skill-orchestrator](skill-orchestrator/SKILL.md) | 决策树 + 流水线 + 调用技巧 |
+| 🎭 快速套主题 | [theme-factory](../theme-factory/SKILL.md) | 10 套开箱即用 CSS 主题 |
+| 🔒 约束设计规范 | [bencium](../bencium/SKILL.md) | Controlled（收紧）/ Innovative（放开） |
+| ⚙️ 代码质量 | [vercel-agent-skills](../vercel-agent-skills/SKILL.md) | React 实践 + Web 规范 + 组件模式 |
+| ♿ 无障碍检查 | [accesslint](../accesslint/SKILL.md) | WCAG 2.2 AA/AAA 合规 |
+| 🏗️ 设计系统持久化 | [interface-design](../interface-design/SKILL.md) | Token 强制 + 防设计债 |
+| 🎬 动画引擎 | [gsap-skill](../gsap-skill/SKILL.md) | GSAP 动画体系 |
 
 ---
 
@@ -81,7 +80,71 @@ description: Use when doing frontend/UI design work and unsure which design skil
 - ❌ 别把 `ui-ux-pro-max` 的 `data/*.csv` 全量载入（用 `scripts/search.py --domain` 按需查询；本机 Python 走 `py -3`）
 - ❌ 别在 `bencium` Controlled 模式下用 `frontend-design`
 - ✅ `impeccable` 已编译到 v4.0.4：模板变量全部解析为 `<skill-base-dir>` 约定（脚本可移植、不写死本机路径），`node` 可直接调用
-- ⚠️ `vercel-agent-skills/` 内的 web-design-guidelines.md 已去重为指针，权威原版在顶层 `web-design-guidelines`
+- ⚠️ `vercel-agent-skills/` 内的 web-design-guidelines.md 已去重为指针，权威原版为同级的 `web-design-guidelines`
+
+---
+
+## 🧠 深度决策树（原 skill-orchestrator 合并）
+
+### 决策树
+
+```
+用户说"帮我设计一个页面"
+    │
+    ├─ 从零开始，追求独特？
+    │   → frontend-design（定方向）→ theme-factory（选配色）→ vercel-agent-skills（写代码）
+    │
+    ├─ 快速出活，风格无所谓？
+    │   → ui-ux-pro-max（search.py 匹配风格+配色）→ vercel-agent-skills（写代码）
+    │
+    ├─ 已有页面，需要打磨？
+    │   → impeccable（诊断问题）→ 修复后 → accesslint（无障碍复查）
+    │
+    ├─ 长周期产品，要规范？
+    │   → interface-design（Token 体系）→ bencium Controlled（约束检查）
+    │
+    ├─ 创意实验，想玩点不一样的？
+    │   → bencium Innovative（放开约束）→ frontend-design（风格探索）
+    │
+    ├─ 政府/医疗/金融项目？
+    │   → ui-ux-pro-max（行业配色）→ vercel-agent-skills → accesslint（必检）
+    │
+    └─ 需要炫酷动画？
+        → frontend-design（动画方向）→ gsap-skill（实现）→ impeccable（打磨）
+```
+
+### 互斥/替代关系
+
+| 场景 | 选 A | 还是选 B？ |
+|------|------|-----------|
+| 风格方向 | `frontend-design`（引领性） | `ui-ux-pro-max`（参考性） |
+| 配色方案 | `theme-factory`（即用主题） | `ui-ux-pro-max` data/colors.csv（更大库） |
+| 规范约束 | `bencium` Controlled（管流程） | `interface-design`（管 Token） |
+| 质量审查 | `vercel-agent-skills`（编码质量） | `impeccable`（视觉质量） |
+
+> **关键原则**：`frontend-design` 和 `ui-ux-pro-max` 二选一为主，不要同时用。前者是「我要独特」，后者是「帮我匹配」。
+
+### 流水线 5：创意实验（探索链路）
+
+```
+Step 1: bencium Innovative  → 设定实验边界 + 时间盒
+Step 2: frontend-design     → 选择大胆风格方向
+Step 3: ui-ux-pro-max       → search.py --domain styles 浏览 79 种风格获取灵感
+Step 4: 决策                → 采纳/放弃/融合
+Step 5: bencium Controlled  → 实验成果规范化（如采纳）
+```
+
+**适用**：品牌重塑、设计冲刺、概念验证  
+**耗时**：时间盒驱动，到期即决策
+
+### 调用技巧
+
+1. **先粗后细** — 不要一开始就调 `impeccable`。先定方向（`frontend-design`）→ 写代码（`vercel-agent-skills`）→ 最后打磨。反过来会反复返工。
+2. **知识库随用随查** — `ui-ux-pro-max` 的 `data/*.csv` 不要全量读，用 `scripts/search.py --domain` 按域查询（本机 Python 走 `py -3`）。
+3. **Token 先于编码** — 在 `vercel-agent-skills` 写代码前，先让 `interface-design` 或 `theme-factory` 输出 CSS 变量，避免全局替换。
+4. **GSAP 不独行** — 动画方向来自 `frontend-design`，性能约束来自 `vercel-agent-skills`，打磨来自 `impeccable`。
+5. **递进式交付** — 第一轮功能 + Token；第二轮动效；第三轮 `impeccable` 像素打磨；第四轮 `accesslint` 无障碍。
+6. **冲突检测** — `frontend-design` 禁用 Inter/Roboto 时跳过 ui-ux-pro-max 相应字体；`bencium` Controlled 要求 Token 时不能同时「自由发挥」；`accesslint` 高对比度要求下部分暗色主题需微调。
 
 ---
 
@@ -98,19 +161,17 @@ description: Use when doing frontend/UI design work and unsure which design skil
 ├── make-interfaces-feel-better/   ← [顶层] 交互细节打磨（jakubkrehel 原版）
 ├── bklit-ui/                      ← [顶层] 图表组件（bklit/bklit-ui 原版，MIT）
 ├── web-design-guidelines/         ← [顶层] Vercel Web 规范校验（运行时拉最新规则）
-└── frontend-skills-hub/           ← 你在这里（策展技能 + 调度中心）
-    ├── SKILL.md
-    ├── theme-factory/             ← 10 套 CSS 主题
-    ├── bencium/                   ← 设计规范约束
-    ├── vercel-agent-skills/       ← 工程化质量（React/Web/组件）
-    ├── accesslint/                ← 无障碍合规
-    ├── interface-design/          ← 设计系统持久化
-    ├── gsap-skill/                ← GSAP 动画体系
-    └── skill-orchestrator/        ← 详细调度指南
+├── theme-factory/                 ← [顶层] 10 套 CSS 主题（自烘）
+├── bencium/                       ← [顶层] 设计规范约束（自烘）
+├── accesslint/                    ← [顶层] WCAG 无障碍合规（自烘）
+├── interface-design/              ← [顶层] 设计系统持久化（自烘）
+├── gsap-skill/                    ← [顶层] GSAP 动画体系（自烘）
+├── vercel-agent-skills/           ← [顶层] 工程化质量（自烘）
+└── frontend-skills-hub/           ← 选路中心（仅 SKILL.md + 决策树，无内嵌技能）
 ```
 
 ---
 
 ## 一句话总结
 
-**定方向** → `frontend-design` / `design-taste-frontend` | **查知识** → `ui-ux-pro-max` | **打磨迭代** → `impeccable` | **微细节** → `make-interfaces-feel-better` | **图表可视化** → `bklit-ui` | **交付校验** → `web-design-guidelines` + `accesslint` | **工程化** → `vercel-agent-skills` | **不确定用哪个** → 看 [skill-orchestrator](skill-orchestrator/SKILL.md)
+**定方向** → `frontend-design` / `design-taste-frontend` | **查知识** → `ui-ux-pro-max` | **打磨迭代** → `impeccable` | **微细节** → `make-interfaces-feel-better` | **图表可视化** → `bklit-ui` | **交付校验** → `web-design-guidelines` + `accesslint` | **工程化** → `vercel-agent-skills` | **不确定用哪个** → 看上方的深度决策树

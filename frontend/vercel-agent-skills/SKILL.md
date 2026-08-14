@@ -1,31 +1,29 @@
 ---
 name: vercel-agent-skills
-description: Engineering quality enforcer for UI code — focuses on technical quality, not aesthetics. Covers web design guidelines (100+ accessibility/performance/UX rules), React best practices (57 rules across 8 categories), component composition patterns (Compound Components, Render Props, etc.), and React Native mobile best practices. Use as a complement to visual design skills for production-grade frontend projects.
+description: Engineering quality enforcer for UI code — focuses on technical quality, not aesthetics. Covers web design guidelines (100+ accessibility/performance/UX rules), React best practices (57 rules across 8 categories), and component composition patterns (Compound Components, Render Props, etc.). Use as a complement to visual design skills for production-grade frontend projects.
 ---
 
 # Vercel Agent Skills — 工程化质量守门员
 
 ## 概述
 
-本技能专注 UI 代码的**技术质量**，是视觉设计技能的完美补充。包含 4 个子模块：
+本技能专注 UI 代码的**技术质量**，是视觉设计技能的完美补充。包含 3 个子模块：
 
 | 子技能 | 内容 | 文件 |
 |--------|------|------|
 | Web Design Guidelines | 100+ 条可访问性、性能、UX 规则审计 | [web-design-guidelines.md](web-design-guidelines.md) |
 | React Best Practices | 57 条规则，8 个分类，React/Next.js 性能优化 | [react-best-practices.md](react-best-practices.md) |
 | Composition Patterns | 可扩展组件架构模式 | [composition-patterns.md](composition-patterns.md) |
-| React Native Skills | 移动端 UI 性能与动画最佳实践 | React Native 场景启用 |
 
 ## 使用方式
 
 1. **Web 项目**: 全部 3 个子模块生效
-2. **React Native**: 仅 React Native Skills 生效
-3. **非 React 项目**: Web Design Guidelines 生效
+2. **非 React 项目**: Web Design Guidelines 生效
 
 ## 与视觉技能的协作
 
 ```
-视觉技能 (frontend-design / uiux-pro-max)
+视觉技能 (frontend-design / ui-ux-pro-max)
     ↓ 输出: 设计方向、配色、字体
 工程化技能 (vercel-agent-skills)
     ↓ 审查: 可访问性、性能、代码质量

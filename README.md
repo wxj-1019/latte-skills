@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/brews-15-%23c98f2c"></a>
+  <a href="#"><img src="https://img.shields.io/badge/brews-14-%23c98f2c"></a>
   <a href="#"><img src="https://img.shields.io/badge/ZCode%20%C2%B7%20Claude%20Code%20%C2%B7%20Codex-compatible-success"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT%20(self--built)-blue"></a>
   <a href="https://github.com/wxj-1019/latte-skills/commits"><img src="https://img.shields.io/github/last-commit/wxj-1019/latte-skills"></a>
@@ -79,20 +79,19 @@ cp -r latte-skills/frontend/frontend-design ~/.zcode/skills/
 
 ## 完整菜单 · Full Menu
 
-### <img src="assets/icons/screen.svg" width="16"> `frontend/` — 前端设计（14 杯）
+### <img src="assets/icons/screen.svg" width="16"> `frontend/` — 前端设计（13 杯）
 
-**店藏拼配**（`frontend-skills-hub/` 内，自烘）：
+**店藏拼配**（自烘，已展平到 `frontend/` 顶层；`frontend-skills-hub/` 仅作选路中心）：
 
 | 拼配 | 风味 |
 |---|---|
-| `frontend-skills-hub` | 选路中心：场景 → 技能路由 + 流水线 |
+| `frontend-skills-hub` | 选路中心：场景 → 技能路由 + 流水线 + 决策树 |
 | `theme-factory` | 10 套开箱即用 CSS 主题 |
 | `bencium` | 设计规范约束（Controlled / Innovative） |
 | `accesslint` | WCAG 2.2 AA/AAA 无障碍合规 |
-| `interface-design` | 设计系统持久化、Token 强制 |
+| `interface-design` | 设计系统持久化，Token 强制 |
 | `gsap-skill` | GSAP 动画体系 |
 | `vercel-agent-skills` | React 实践 + 组件模式（工程化质量） |
-| `skill-orchestrator` | 详细决策树与流水线 |
 
 ### <img src="assets/icons/tool.svg" width="16"> `general/` — 通用技能
 
@@ -133,7 +132,7 @@ cp -r latte-skills/frontend/frontend-design ~/.zcode/skills/
 latte-skills/
 ├── assets/banner.svg        ← 本店招牌（动画主视觉）
 ├── README.md  /  README.en.md  /  LICENSE (MIT)
-├── frontend/                ← 前端拼配柜（14 杯）
+├── frontend/                ← 前端拼配柜（13 杯）
 │   ├── frontend-design/         ☕☕ 视觉方向
 │   ├── design-taste-frontend/   ☕☕ 落地页/作品集
 │   ├── ui-ux-pro-max/           ☕☕☕ 知识库 (data/ references/ scripts/)
@@ -141,7 +140,13 @@ latte-skills/
 │   ├── make-interfaces-feel-better/  ☕ 交互细节
 │   ├── bklit-ui/                ☕ 图表组件 (SKILL.md + rules/)
 │   ├── web-design-guidelines/   ☕ Vercel 规范校验
-│   └── frontend-skills-hub/     ← 选路中心 + 7 杯自烘拼配
+│   ├── theme-factory/           ☕ 10 套 CSS 主题（自烘）
+│   ├── bencium/                 ☕ 规范约束（自烘）
+│   ├── accesslint/              ☕ 无障碍合规（自烘）
+│   ├── interface-design/        ☕ Token 持久化（自烘）
+│   ├── gsap-skill/              ☕ GSAP 动画（自烘）
+│   ├── vercel-agent-skills/     ☕ 工程化质量（自烘）
+│   └── frontend-skills-hub/     ← 选路中心（无内嵌技能）
 ├── general/                ← 通用拼配柜
 │   └── readme-makeover/        ☕☕ README 改造术（SKILL.md + references/）
 └── （未来: backend/  …）
@@ -182,7 +187,7 @@ git add -A && git commit -m "feat: 新豆 <技能名>" && git push
 | `bklit-ui` | MIT |
 | 其余上游豆 | 见各产地 LICENSE |
 
-**自烘内容**（`frontend-skills-hub/` 及其 7 杯拼配、README、招牌与脚手架）采用 **MIT 许可证**（见根目录 [LICENSE](LICENSE)）；`frontend/` 下上游豆保留各自原始许可。
+**自烘内容**（`frontend-skills-hub/` 及其 6 杯拼配、README、招牌与脚手架）采用 **MIT 许可证**（见根目录 [LICENSE](LICENSE)）；`frontend/` 下上游豆保留各自原始许可。
 
 ---
 
