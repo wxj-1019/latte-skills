@@ -81,6 +81,8 @@ cp -r latte-skills/frontend/frontend-design ~/.zcode/skills/
 
 ### <img src="assets/icons/screen.svg" width="16"> `frontend/` — Frontend Design (13 brews)
 
+> `frontend-skills-hub/` is the routing hub and does not count as a brew.
+
 **House blends** (self-roasted, flattened to `frontend/` top level; `frontend-skills-hub/` is routing only):
 
 | Blend | Flavor |

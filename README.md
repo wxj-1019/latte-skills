@@ -81,6 +81,8 @@ cp -r latte-skills/frontend/frontend-design ~/.zcode/skills/
 
 ### <img src="assets/icons/screen.svg" width="16"> `frontend/` — 前端设计（13 杯）
 
+> `frontend-skills-hub/` 是选路中心（路由器），不计入杯数。
+
 **店藏拼配**（自烘，已展平到 `frontend/` 顶层；`frontend-skills-hub/` 仅作选路中心）：
 
 | 拼配 | 风味 |

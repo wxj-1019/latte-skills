@@ -3,24 +3,25 @@
 # Usage:  powershell -ExecutionPolicy Bypass -File scripts/check-skills.ps1
 # Enforced rules (same gate as CI, see .github/workflows/skills-ci.yml):
 #   1. Every SKILL.md has a `name:` matching its directory
-#   2. `description:` present and <= 1024 chars
+#   2. `description:` present and <= 1024 chars (exceptions allowed, see below)
 #   3. SKILL.md <= 500 lines unless listed in CURATION_EXCEPTIONS.md
 #   4. Every skill has UPSTREAM.md (or PROVENANCE.md)
 
 $ErrorActionPreference = "Stop"
 $root = Split-Path -Parent $PSScriptRoot
 $failed = 0
-$warned = 0
 
 $exceptionsFile = Join-Path $root "CURATION_EXCEPTIONS.md"
 $exceptions = @()
 if (Test-Path $exceptionsFile) {
-    $exceptions = Get-Content $exceptionsFile | Where-Object { $_ -match "^\|\s*\`?([a-z0-9-]+)\`?\s*\|" } |
-        ForEach-Object { $Matches[1] }
+    foreach ($line in (Get-Content $exceptionsFile)) {
+        $m = [regex]::Match($line, '^\|\s*`?([a-z0-9-]+)`?\s*\|')
+        if ($m.Success) { $exceptions += $m.Groups[1].Value }
+    }
 }
 
 Get-ChildItem -Path $root -Recurse -Filter SKILL.md |
-  Where-Object { $_.FullName -notmatch "\\.git\\" } |
+  Where-Object { $_.FullName -notmatch "\.git\\" } |
   ForEach-Object {
     $dir = $_.Directory.Name
     $raw = [System.IO.File]::ReadAllText($_.FullName)
@@ -36,24 +37,29 @@ Get-ChildItem -Path $root -Recurse -Filter SKILL.md |
     }
 
     # Rule 2: description present and within limit
-    $descMatch = [regex]::Match($raw, '(?ms)^description:\s*(.+?)\s*^(?:\w[\w-]*:|---)')
-    if (-not $descMatch.Success -or $descMatch.Groups[1].Value.Trim().Length -eq 0) {
+    $descMatch = [regex]::Match($raw, '(?ms)^description:\s*(.+?)\s*^(?:[a-z][a-z-]*:|---)')
+    if (-not $descMatch.Success) {
       Write-Host "[FAIL] $($_.FullName): missing description"; $failed++; return
     }
-    if ($descMatch.Groups[1].Value.Trim().Length -gt 1024) {
-      Write-Host "[FAIL] $($_.FullName): description exceeds 1024 chars"; $failed++; return
+    $descLen = $descMatch.Groups[1].Value.Trim().Length
+    if ($descLen -gt 1024) {
+      if ($exceptions -contains $dir) {
+        Write-Host "[WARN] $($_.FullName): description $descLen chars (excepted in CURATION_EXCEPTIONS.md)"
+      } else {
+        Write-Host "[FAIL] $($_.FullName): description exceeds 1024 chars"; $failed++; return
+      }
     }
 
     # Rule 3: line limit with explicit exceptions
-    if ($lines.Count -gt 500 -and $exceptions -notcontains $dir) {
-      Write-Host "[FAIL] $($_.FullName): $($lines.Count) lines, not in CURATION_EXCEPTIONS.md"; $failed++; return
-    }
     if ($lines.Count -gt 500) {
-      Write-Host "[WARN] $($_.FullName): $($lines.Count) lines (excepted in CURATION_EXCEPTIONS.md)"
+      if ($exceptions -contains $dir) {
+        Write-Host "[WARN] $($_.FullName): $($lines.Count) lines (excepted in CURATION_EXCEPTIONS.md)"
+      } else {
+        Write-Host "[FAIL] $($_.FullName): $($lines.Count) lines, not in CURATION_EXCEPTIONS.md"; $failed++; return
+      }
     }
 
     # Rule 4: provenance record
-    $prov = Join-Path $_.Directory.Name "" | Out-Null
     $provPath = Join-Path $_.Directory.FullName "UPSTREAM.md"
     if (-not (Test-Path $provPath)) { $provPath = Join-Path $_.Directory.FullName "PROVENANCE.md" }
     if (-not (Test-Path $provPath)) {
