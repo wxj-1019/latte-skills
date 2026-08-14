@@ -1,0 +1,23 @@
+name: skills-ci
+
+on:
+  push:
+    paths:
+      - "**/SKILL.md"
+      - "**/*.md"
+      - ".github/workflows/skills-ci.yml"
+  pull_request:
+
+jobs:
+  lint-agent-configs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate agent configs
+        uses: agent-sh/agnix@v0
+        with:
+          target: "claude-code"
+
+      - name: Strict lint with PR annotations
+        run: npx --yes agnix --strict --format github --target claude-code .
