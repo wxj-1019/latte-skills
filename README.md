@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/brews-22-%23c98f2c"></a>
+  <a href="#"><img src="https://img.shields.io/badge/brews-24-%23c98f2c"></a>
   <a href="#"><img src="https://img.shields.io/badge/ZCode%20%C2%B7%20Claude%20Code%20%C2%B7%20Codex-compatible-success"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT%20(self--built)-blue"></a>
   <a href="https://github.com/wxj-1019/latte-skills/commits"><img src="https://img.shields.io/github/last-commit/wxj-1019/latte-skills"></a>
@@ -119,6 +119,18 @@ cp -r latte-skills/frontend/frontend-design ~/.zcode/skills/
 | **mcp-builder** | ☕☕ | MCP 服务器构建：双输出/工具注解/评测方法（Anthropic 原版，Apache-2.0） |
 | **claude-api** | ☕☕☕ | Claude/Anthropic API 全语言知识包（按需安装，定期同步上游，Apache-2.0） |
 
+### <img src="assets/icons/target.svg" width="16"> `product/` — 需求与规格（1 杯）
+
+| 拼配 | 浓度 | 风味 |
+|---|:---:|---|
+| **specification-and-acceptance** | ☕☕ | 编码前先定规格：编号需求 + Given-When-Then 验收 + 需求→测试追踪矩阵（自烘改写） |
+
+### <img src="assets/icons/layers.svg" width="16"> `architecture/` — 架构决策（1 杯）
+
+| 拼配 | 浓度 | 风味 |
+|---|:---:|---|
+| **architecture-decision-records** | ☕ | 证据优先的 ADR：上下文/决策/后果/备选项与否决理由（自烘改写） |
+
 <!--
 未来拼配柜：### 🛠️ backend/
 -->
@@ -182,6 +194,10 @@ latte-skills/
 ├── ai-development/        ← AI 开发柜（2 杯）
 │   ├── mcp-builder/             ☕☕ MCP 服务器构建
 │   └── claude-api/              ☕☕☕ Claude API 知识包
+├── product/               ← 需求与规格柜（1 杯）
+│   └── specification-and-acceptance/  ☕☕ 规格与验收
+├── architecture/          ← 架构决策柜（1 杯）
+│   └── architecture-decision-records/  ☕ ADR 决策记录
 └── （未来: backend/  …）
 ```
 
