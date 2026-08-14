@@ -18,25 +18,25 @@
 
 ---
 
-> 🫘 **latte-skills** 把优质的设计与工程技能（SKILL.md）当**咖啡豆**来经营——
+> <img src="assets/icons/bean.svg" width="16"> **latte-skills** 把优质的设计与工程技能（SKILL.md）当**咖啡豆**来经营——
 > **萃取、拼配、按需冲煮**。分类即拼配豆，技能即特调，克隆即开张。
 > 一处烘焙，随处装杯。
 
-## ✨ 本店特色
+## 本店特色
 
 | | |
 |---|---|
-| 🫘 **单品精选** | 每颗豆都经实测可用，不灌水 |
-| 🧩 **即装即饮** | 复制到技能目录、重启会话即出杯 |
-| 🗂️ **拼配归档** | 按领域分柜（`frontend/` …），无限续杯 |
-| 🔌 **多机兼容** | ZCode / Claude Code / Codex / Cursor 通用 SKILL.md |
-| 🚚 **便携冲煮** | 脚本走 `<skill-base-dir>`，不写死本机路径 |
+| <img src="assets/icons/bean.svg" width="18"> **单品精选** | 每颗豆都经实测可用，不灌水 |
+| <img src="assets/icons/cup.svg" width="18"> **即装即饮** | 复制到技能目录、重启会话即出杯 |
+| <img src="assets/icons/shelf.svg" width="18"> **拼配归档** | 按领域分柜（`frontend/` …），无限续杯 |
+| <img src="assets/icons/port.svg" width="18"> **多机兼容** | ZCode / Claude Code / Codex / Cursor 通用 SKILL.md |
+| <img src="assets/icons/pour.svg" width="18"> **便携冲煮** | 脚本走 `<skill-base-dir>`，不写死本机路径 |
 
 > 浓度图例：`☕` 清饮（聚焦） · `☕☕` 中烘 · `☕☕☕` 特浓（重型/知识量大）
 
 ---
 
-## ☕ 今日特调 · Signature Menu
+## 今日特调 · Signature Menu
 
 7 款上游原味豆，社区公认优质，均已验证出杯：
 
@@ -52,7 +52,7 @@
 
 ---
 
-## 🧪 萃取一杯 · Quick Brew
+## 萃取一杯 · Quick Brew
 
 ```bash
 # 1) 取豆
@@ -77,7 +77,7 @@ cp -r latte-skills/frontend/frontend-design ~/.zcode/skills/
 
 ---
 
-## 📋 完整菜单 · Full Menu
+## 完整菜单 · Full Menu
 
 ### 🎨 `frontend/` — 前端设计（14 杯）
 
@@ -106,7 +106,7 @@ cp -r latte-skills/frontend/frontend-design ~/.zcode/skills/
 
 ---
 
-## 🧑‍💻 怎么点单 · Usage
+## 怎么点单 · Usage
 
 技能不是按钮，是**给 AI 的风味说明书**。两种点法：
 
@@ -127,7 +127,7 @@ cp -r latte-skills/frontend/frontend-design ~/.zcode/skills/
 
 ---
 
-## 🗂️ 仓位 · Layout
+## 仓位 · Layout
 
 ```
 latte-skills/
@@ -149,7 +149,7 @@ latte-skills/
 
 ---
 
-## 🚚 便携冲煮 · Portability
+## 便携冲煮 · Portability
 
 - `impeccable` / `ui-ux-pro-max` 萃取脚本走 `<skill-base-dir>` 约定——由运行时报出技能所在目录，**不写死本机路径**
 - Windows 上 Python 不在 PATH 时用 `py -3`（`ui-ux-pro-max` 搜索）
@@ -159,7 +159,7 @@ latte-skills/
 
 ---
 
-## ➕ 自烘一豆 · Add Your Own
+## 自烘一豆 · Add Your Own
 
 ```bash
 cp -r <技能目录> frontend/<技能名>/      # 入柜
@@ -171,7 +171,7 @@ git add -A && git commit -m "feat: 新豆 <技能名>" && git push
 
 ---
 
-## 📜 来源与许可 · Sources & License
+## 来源与许可 · Sources & License
 
 本店精选豆均来自开源庄园，各自保留原产地许可：
 

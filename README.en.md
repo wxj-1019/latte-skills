@@ -18,25 +18,25 @@
 
 ---
 
-> 🫘 **latte-skills** treats high-quality design & engineering skills (SKILL.md) like **coffee beans** —
+> <img src="assets/icons/bean.svg" width="16"> **latte-skills** treats high-quality design & engineering skills (SKILL.md) like **coffee beans** —
 > **roast, blend, brew on demand.** Categories are blends, skills are brews, a clone opens the shop.
 > Roast once, pour anywhere.
 
-## ✨ Why this shop
+## Why this shop
 
 | | |
 |---|---|
-| 🫘 **Single-origin picks** | Every bean is verified working — no filler |
-| 🧩 **Plug-and-sip** | Drop into a skills dir, restart the session, served |
-| 🗂️ **Blended shelves** | Organized by domain (`frontend/`, …), endless refills |
-| 🔌 **Multi-rig** | SKILL.md works on ZCode / Claude Code / Codex / Cursor |
-| 🚚 **Portable brew** | Scripts use `<skill-base-dir>`, no hard-coded paths |
+| <img src="assets/icons/bean.svg" width="18"> **Single-origin picks** | Every bean is verified working — no filler |
+| <img src="assets/icons/cup.svg" width="18"> **Plug-and-sip** | Drop into a skills dir, restart the session, served |
+| <img src="assets/icons/shelf.svg" width="18"> **Blended shelves** | Organized by domain (`frontend/`, …), endless refills |
+| <img src="assets/icons/port.svg" width="18"> **Multi-rig** | SKILL.md works on ZCode / Claude Code / Codex / Cursor |
+| <img src="assets/icons/pour.svg" width="18"> **Portable brew** | Scripts use `<skill-base-dir>`, no hard-coded paths |
 
 > Strength legend: `☕` light (focused) · `☕☕` medium · `☕☕☕` dark (heavyweight / knowledge-dense)
 
 ---
 
-## ☕ Signature Menu
+## Signature Menu
 
 Seven upstream beans, community-renowned, all verified to pour:
 
@@ -52,7 +52,7 @@ Seven upstream beans, community-renowned, all verified to pour:
 
 ---
 
-## 🧪 Quick Brew
+## Quick Brew
 
 ```bash
 # 1) Grab the beans
@@ -77,7 +77,7 @@ cp -r latte-skills/frontend/frontend-design ~/.zcode/skills/
 
 ---
 
-## 📋 Full Menu
+## Full Menu
 
 ### 🎨 `frontend/` — Frontend Design (14 brews)
 
@@ -106,7 +106,7 @@ Future shelves: ### 🛠️ backend/
 
 ---
 
-## 🧑‍💻 How to order
+## How to order
 
 Skills aren't buttons — they're **flavor primers for the AI**. Two ways to order:
 
@@ -127,7 +127,7 @@ See each `SKILL.md` `description` field (the ordering code).
 
 ---
 
-## 🗂️ Layout
+## Layout
 
 ```
 latte-skills/
@@ -149,7 +149,7 @@ latte-skills/
 
 ---
 
-## 🚚 Portability
+## Portability
 
 - `impeccable` / `ui-ux-pro-max` invoke scripts via the `<skill-base-dir>` convention — resolved by the runtime to the skill's install dir, **no hard-coded path**.
 - On Windows, use `py -3` if `python`/`python3` isn't on PATH (for `ui-ux-pro-max`).
@@ -159,7 +159,7 @@ latte-skills/
 
 ---
 
-## ➕ Roast your own
+## Roast your own
 
 ```bash
 cp -r <skill-dir> frontend/<skill-name>/      # onto the shelf
@@ -171,7 +171,7 @@ For a new category, just create a top-level folder and register it in the menu a
 
 ---
 
-## 📜 Sources & License
+## Sources & License
 
 Every bean is sourced from an open-source estate and keeps its origin license:
 
