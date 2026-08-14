@@ -5,19 +5,27 @@ on:
     paths:
       - "**/SKILL.md"
       - "**/*.md"
+      - "**/*.ps1"
+      - "**/*.py"
+      - "**/*.mjs"
       - ".github/workflows/skills-ci.yml"
   pull_request:
 
 jobs:
-  lint-agent-configs:
+  validate-skills:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Validate agent configs
+      # Non-blocking: produces PR annotations for agent-config issues.
+      # Strict mode is intentionally NOT used here — upstream docs contain
+      # angle-bracket placeholders that agnix flags as false positives.
+      - name: Lint agent configs (annotations only)
         uses: agent-sh/agnix@v0
         with:
           target: "claude-code"
+        continue-on-error: true
 
-      - name: Strict lint with PR annotations
-        run: npx --yes agnix --strict --format github --target claude-code .
+      # Blocking gate: deterministic structural checks shared with local dev.
+      - name: Hard gate — skill structure
+        run: pwsh -File scripts/check-skills.ps1

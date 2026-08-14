@@ -6,14 +6,14 @@
 
 - [ ] `SKILL.md` frontmatter 有效，`name` 与目录名一致（1-64 字符，小写字母/数字/连字符）
 - [ ] `description` ≤ 1024 字符，同时说明「做什么」和「何时用」
-- [ ] 主 `SKILL.md` < 500 行；细节下沉到 `references/`、`scripts/`、`assets/`
+- [ ] 主 `SKILL.md` < 500 行；细节下沉到 `references/`、`scripts/`、`assets/`。例外必须在 `CURATION_EXCEPTIONS.md` 登记（技能名、原因、固定 commit、复审日期）
 - [ ] 内部链接在技能目录内可解析（自包含优先）
 - [ ] 带脚本/Hook/联网/破坏性命令的，单独做安全审计
-- [ ] CI 通过：`.github/workflows/skills-ci.yml`（agnix）+ 本地 `scripts/check-skills.ps1`
+- [ ] CI 通过：`.github/workflows/skills-ci.yml`（agnix 注释 + 本地同款结构硬门禁 `scripts/check-skills.ps1`）
 
 ## 2. 溯源与许可（人工）
 
-- [ ] 每技能带 `UPSTREAM.md`：来源 URL、固定 commit、导入日期、许可、本地修改清单
+- [ ] 每技能带溯源文件：上游导入用 `UPSTREAM.md`（来源 URL、固定 commit、导入日期、许可、本地修改清单）；自烘技能用 `PROVENANCE.md`（自建声明 + 设计依据/参考来源）
 - [ ] 许可明确：上游原样保留原 LICENSE 文件；重写/合成的注明多源与差异
 - [ ] 聚合仓库（awesome-* 类）不能直接收录，只作发现入口
 
