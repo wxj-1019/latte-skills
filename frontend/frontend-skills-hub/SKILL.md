@@ -5,7 +5,7 @@ description: Use when doing frontend/UI design work and unsure which design skil
 
 # 🧭 前端技能调度中心
 
-> 前端技能的选路入口。6 款上游设计技能已**拍平为顶层 skill**（可被 ZCode 直接调用）；本 hub 另托管 7 个策展技能并负责选路。
+> 前端技能的选路入口。7 款上游设计技能已**拍平为顶层 skill**（可被 ZCode 直接调用）；本 hub 另托管 7 个策展技能并负责选路。
 
 ---
 
@@ -20,6 +20,7 @@ description: Use when doing frontend/UI design work and unsure which design skil
 | 📚 查设计知识库 | `ui-ux-pro-max` | 79 风格 + 192 配色 + 74 字体 + 119 UX 规则（search.py 按域查询） |
 | 🔍 全方位设计打磨 | `impeccable` | 23 命令审计/打磨/浏览器实时迭代（已编译 v4.0.4） |
 | ✨ 像素级交互细节 | `make-interfaces-feel-better` | 同心圆角、光学对齐、点击区、微交互 |
+| 📊 图表/数据可视化 | `bklit-ui` | 14 类图表按 @bklit registry 安装；组合/主题/动画规则含正误示例 |
 | ✅ 交付前规范校验 | `web-design-guidelines` | Vercel Web 规范合规审查（运行时拉取最新规则） |
 
 ### 🗂️ 策展技能（本 hub 内）
@@ -64,6 +65,7 @@ description: Use when doing frontend/UI design work and unsure which design skil
 | 主题、模板、现成的 | `theme-factory` |
 | 方向重塑、critique、audit、polish、迭代 | `impeccable` |
 | 圆角、对齐、点击区、交互细节、手感 | `make-interfaces-feel-better` |
+| 图表、chart、数据可视化、dashboard 图表 | `bklit-ui` |
 | 校验、合规、审计、review UI、Web 规范 | `web-design-guidelines` |
 | 规范、统一、约束、Token | `interface-design` 或 `bencium` |
 | 代码质量、性能、最佳实践 | `vercel-agent-skills` |
@@ -75,6 +77,7 @@ description: Use when doing frontend/UI design work and unsure which design skil
 - ❌ 别同时用 `frontend-design` + `ui-ux-pro-max` 做主决策（会冲突）
 - ❌ 别在没代码时调 `impeccable` 的 polish/audit（没东西诊断；它的 new-work 可从零开始）
 - ❌ 别跳过 `accesslint` 直接交付
+- ❌ 别在能装 `bklit-ui` 图表时手搓 SVG（先 `npx shadcn@latest add @bklit/<slug>`）
 - ❌ 别把 `ui-ux-pro-max` 的 `data/*.csv` 全量载入（用 `scripts/search.py --domain` 按需查询；本机 Python 走 `py -3`）
 - ❌ 别在 `bencium` Controlled 模式下用 `frontend-design`
 - ✅ `impeccable` 已编译到 v4.0.4：模板变量全部解析为 `<skill-base-dir>` 约定（脚本可移植、不写死本机路径），`node` 可直接调用
@@ -93,6 +96,7 @@ description: Use when doing frontend/UI design work and unsure which design skil
 ├── impeccable/                    ← [顶层] 23 命令设计指导 + 浏览器迭代（已编译 v4.0.4）
 │   └── SKILL.md / reference/ / scripts/
 ├── make-interfaces-feel-better/   ← [顶层] 交互细节打磨（jakubkrehel 原版）
+├── bklit-ui/                      ← [顶层] 图表组件（bklit/bklit-ui 原版，MIT）
 ├── web-design-guidelines/         ← [顶层] Vercel Web 规范校验（运行时拉最新规则）
 └── frontend-skills-hub/           ← 你在这里（策展技能 + 调度中心）
     ├── SKILL.md
@@ -109,4 +113,4 @@ description: Use when doing frontend/UI design work and unsure which design skil
 
 ## 一句话总结
 
-**定方向** → `frontend-design` / `design-taste-frontend` | **查知识** → `ui-ux-pro-max` | **打磨迭代** → `impeccable` | **微细节** → `make-interfaces-feel-better` | **交付校验** → `web-design-guidelines` + `accesslint` | **工程化** → `vercel-agent-skills` | **不确定用哪个** → 看 [skill-orchestrator](skill-orchestrator/SKILL.md)
+**定方向** → `frontend-design` / `design-taste-frontend` | **查知识** → `ui-ux-pro-max` | **打磨迭代** → `impeccable` | **微细节** → `make-interfaces-feel-better` | **图表可视化** → `bklit-ui` | **交付校验** → `web-design-guidelines` + `accesslint` | **工程化** → `vercel-agent-skills` | **不确定用哪个** → 看 [skill-orchestrator](skill-orchestrator/SKILL.md)

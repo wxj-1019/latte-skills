@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/brews-14-%23c98f2c"></a>
+  <a href="#"><img src="https://img.shields.io/badge/brews-15-%23c98f2c"></a>
   <a href="#"><img src="https://img.shields.io/badge/ZCode%20%C2%B7%20Claude%20Code%20%C2%B7%20Codex-compatible-success"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT%20(self--built)-blue"></a>
   <a href="https://github.com/wxj-1019/latte-skills/commits"><img src="https://img.shields.io/github/last-commit/wxj-1019/latte-skills"></a>
@@ -38,7 +38,7 @@
 
 ## ☕ 今日特调 · Signature Menu
 
-6 款上游原味豆，社区公认优质，均已验证出杯：
+7 款上游原味豆，社区公认优质，均已验证出杯：
 
 | 特调 | 浓度 | 风味 | 产地 |
 |---|:---:|---|---|
@@ -47,6 +47,7 @@
 | **ui-ux-pro-max** | ☕☕☕ | 79 风格 / 192 配色 / 74 字体 / 119 UX 规则，`search.py` 按域萃取 | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) |
 | **impeccable** | ☕☕☕ | 23 命令设计审计/打磨/浏览器实时迭代（编译 v4.0.4） | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) |
 | **make-interfaces-feel-better** | ☕ | 同心圆角 / 光学对齐 / 点击区 / 微交互细节 | [jakubkrehel/make-interfaces-feel-better](https://github.com/jakubkrehel/make-interfaces-feel-better) |
+| **bklit-ui** | ☕ | 14 类图表按 shadcn registry 安装；组合/主题/动画规则含正误示例 | [bklit/bklit-ui](https://github.com/bklit/bklit-ui) |
 | **web-design-guidelines** | ☕ | Vercel Web 规范合规审查（运行时拉最新规则） | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) |
 
 ---
@@ -78,7 +79,7 @@ cp -r latte-skills/frontend/frontend-design ~/.zcode/skills/
 
 ## 📋 完整菜单 · Full Menu
 
-### 🎨 `frontend/` — 前端设计（13 杯）
+### 🎨 `frontend/` — 前端设计（14 杯）
 
 **店藏拼配**（`frontend-skills-hub/` 内，自烘）：
 
@@ -117,6 +118,7 @@ cp -r latte-skills/frontend/frontend-design ~/.zcode/skills/
 | "查一下企业后台常见的配色和字体" | `ui-ux-pro-max` |
 | "这页感觉不对，打磨到专业级" | `impeccable` |
 | "按钮/卡片的圆角对齐点击区调舒服" | `make-interfaces-feel-better` |
+| "给页面/后台加图表和数据可视化" | `bklit-ui` |
 | "检查这 UI 是否符合 Web 规范" | `web-design-guidelines` |
 
 **2. 直点单品**：`/frontend-design`、`/impeccable`、`/ui-ux-pro-max` …
@@ -131,12 +133,13 @@ cp -r latte-skills/frontend/frontend-design ~/.zcode/skills/
 latte-skills/
 ├── assets/banner.svg        ← 本店招牌（动画主视觉）
 ├── README.md  /  README.en.md  /  LICENSE (MIT)
-├── frontend/                ← 前端拼配柜（13 杯）
+├── frontend/                ← 前端拼配柜（14 杯）
 │   ├── frontend-design/         ☕☕ 视觉方向
 │   ├── design-taste-frontend/   ☕☕ 落地页/作品集
 │   ├── ui-ux-pro-max/           ☕☕☕ 知识库 (data/ references/ scripts/)
 │   ├── impeccable/              ☕☕☕ 审计+迭代 (reference/ scripts/ · 编译 v4.0.4)
 │   ├── make-interfaces-feel-better/  ☕ 交互细节
+│   ├── bklit-ui/                ☕ 图表组件 (SKILL.md + rules/)
 │   ├── web-design-guidelines/   ☕ Vercel 规范校验
 │   └── frontend-skills-hub/     ← 选路中心 + 7 杯自烘拼配
 ├── general/                ← 通用拼配柜
@@ -151,6 +154,7 @@ latte-skills/
 - `impeccable` / `ui-ux-pro-max` 萃取脚本走 `<skill-base-dir>` 约定——由运行时报出技能所在目录，**不写死本机路径**
 - Windows 上 Python 不在 PATH 时用 `py -3`（`ui-ux-pro-max` 搜索）
 - `web-design-guidelines` 运行时需联网拉 Vercel 规则
+- `bklit-ui` 装图表走 `npx shadcn@latest`，需联网访问 @bklit registry 与 ui.bklit.com 文档
 - `impeccable` 的 `allowed-tools` / 斜杠命令 / hook 是 Claude Code 概念；ZCode 下作设计指导 + `node` 调脚本仍可用
 
 ---
@@ -175,6 +179,7 @@ git add -A && git commit -m "feat: 新豆 <技能名>" && git push
 |---|---|
 | `ui-ux-pro-max` | MIT |
 | `impeccable` | Apache 2.0 |
+| `bklit-ui` | MIT |
 | 其余上游豆 | 见各产地 LICENSE |
 
 **自烘内容**（`frontend-skills-hub/` 及其 7 杯拼配、README、招牌与脚手架）采用 **MIT 许可证**（见根目录 [LICENSE](LICENSE)）；`frontend/` 下上游豆保留各自原始许可。

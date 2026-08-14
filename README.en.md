@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/brews-14-%23c98f2c"></a>
+  <a href="#"><img src="https://img.shields.io/badge/brews-15-%23c98f2c"></a>
   <a href="#"><img src="https://img.shields.io/badge/ZCode%20%C2%B7%20Claude%20Code%20%C2%B7%20Codex-compatible-success"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT%20(self--built)-blue"></a>
   <a href="https://github.com/wxj-1019/latte-skills/commits"><img src="https://img.shields.io/github/last-commit/wxj-1019/latte-skills"></a>
@@ -38,7 +38,7 @@
 
 ## ☕ Signature Menu
 
-Six upstream beans, community-renowned, all verified to pour:
+Seven upstream beans, community-renowned, all verified to pour:
 
 | Brew | Strength | Flavor notes | Origin |
 |---|:---:|---|---|
@@ -47,6 +47,7 @@ Six upstream beans, community-renowned, all verified to pour:
 | **ui-ux-pro-max** | ☕☕☕ | 79 styles / 192 palettes / 74 fonts / 119 UX rules; `search.py` by domain | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) |
 | **impeccable** | ☕☕☕ | 23-command design audit / polish / live browser iteration (compiled v4.0.4) | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) |
 | **make-interfaces-feel-better** | ☕ | Concentric radius / optical alignment / hit areas / micro-interactions | [jakubkrehel/make-interfaces-feel-better](https://github.com/jakubkrehel/make-interfaces-feel-better) |
+| **bklit-ui** | ☕ | 14 chart types via the @bklit shadcn registry; composition/theming/animation rules with Incorrect/Correct examples | [bklit/bklit-ui](https://github.com/bklit/bklit-ui) |
 | **web-design-guidelines** | ☕ | Vercel Web Guidelines compliance review (fetches latest rules at runtime) | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) |
 
 ---
@@ -78,7 +79,7 @@ cp -r latte-skills/frontend/frontend-design ~/.zcode/skills/
 
 ## 📋 Full Menu
 
-### 🎨 `frontend/` — Frontend Design (13 brews)
+### 🎨 `frontend/` — Frontend Design (14 brews)
 
 **House blends** (inside `frontend-skills-hub/`, self-roasted):
 
@@ -117,6 +118,7 @@ Skills aren't buttons — they're **flavor primers for the AI**. Two ways to ord
 | "What palettes/fonts are common for enterprise dashboards?" | `ui-ux-pro-max` |
 | "This page feels off — polish it to a professional level" | `impeccable` |
 | "Fix the radius, alignment, click areas on this button/card" | `make-interfaces-feel-better` |
+| "Add charts / data viz to this page or dashboard" | `bklit-ui` |
 | "Check this UI against web guidelines" | `web-design-guidelines` |
 
 **2. Order by name:** `/frontend-design`, `/impeccable`, `/ui-ux-pro-max` …
@@ -131,12 +133,13 @@ See each `SKILL.md` `description` field (the ordering code).
 latte-skills/
 ├── assets/banner.svg        ← shop sign (animated hero)
 ├── README.md  /  README.en.md  /  LICENSE (MIT)
-├── frontend/                ← frontend shelf (13 brews)
+├── frontend/                ← frontend shelf (14 brews)
 │   ├── frontend-design/         ☕☕ visual direction
 │   ├── design-taste-frontend/   ☕☕ landing/portfolio
 │   ├── ui-ux-pro-max/           ☕☕☕ knowledge base (data/ references/ scripts/)
 │   ├── impeccable/              ☕☕☕ audit + iteration (reference/ scripts/ · v4.0.4)
 │   ├── make-interfaces-feel-better/  ☕ micro-details
+│   ├── bklit-ui/                ☕ chart components (SKILL.md + rules/)
 │   ├── web-design-guidelines/   ☕ Vercel review
 │   └── frontend-skills-hub/     ← routing hub + 7 house blends
 ├── general/                ← general-purpose shelf
@@ -151,6 +154,7 @@ latte-skills/
 - `impeccable` / `ui-ux-pro-max` invoke scripts via the `<skill-base-dir>` convention — resolved by the runtime to the skill's install dir, **no hard-coded path**.
 - On Windows, use `py -3` if `python`/`python3` isn't on PATH (for `ui-ux-pro-max`).
 - `web-design-guidelines` needs network at runtime to fetch Vercel rules.
+- `bklit-ui` installs charts via `npx shadcn@latest` — needs network for the @bklit registry and ui.bklit.com docs.
 - `impeccable`'s `allowed-tools` / slash commands / hooks are Claude Code concepts; under ZCode it still works as design guidance + `node` script calls.
 
 ---
@@ -175,6 +179,7 @@ Every bean is sourced from an open-source estate and keeps its origin license:
 |---|---|
 | `ui-ux-pro-max` | MIT |
 | `impeccable` | Apache 2.0 |
+| `bklit-ui` | MIT |
 | other upstream beans | see each origin's LICENSE |
 
 The **self-roasted content** — `frontend-skills-hub/` and its 7 blends, the READMEs, the shop sign, and scaffolding — is **MIT-licensed** (see root [LICENSE](LICENSE)). Upstream beans under `frontend/` keep their own licenses.
