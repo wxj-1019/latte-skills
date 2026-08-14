@@ -1,54 +1,63 @@
-﻿---
+---
 name: gsap-skill
-description: GSAP animation guidance for systematic website animation optimization. Covers core tweening, timeline orchestration, ScrollTrigger scroll-driven effects, plugins, React integration, performance tuning, utilities, and 3D/WebGL. Use when implementing any UI animation 鈥?entrance effects, scroll reveals, page transitions, micro-interactions, or parallax. Always combine with frontend-design for animation direction and vercel-agent-skills for performance constraints.
+description: GSAP animation guidance for systematic website animation optimization. Covers core tweening, timeline orchestration, ScrollTrigger scroll-driven effects, plugins, React integration, performance tuning, utilities, and 3D/WebGL. Use when implementing any UI animation — entrance effects, scroll reveals, page transitions, micro-interactions, or parallax. Always combine with frontend-design for animation direction and vercel-agent-skills for performance constraints.
 ---
 
-# GSAP 鎶€鑳戒綋绯?
-## 姒傝堪
+# GSAP 技能体系
 
-鏈妧鑳借鐩?8 涓姩鐢讳富棰橈紝鐢ㄤ簬绯荤粺鍖栦紭鍖栫綉绔欏姩鐢绘晥鏋溿€傚悇涓婚鍦ㄦ湰鏂囦欢鍐呭睍寮€璇存槑銆?
-## 妯″潡鍒楄〃
+## 概述
 
-| 妯″潡 | 瀹氫綅 | 鏍稿績鑳藉姏 |
+本技能覆盖 8 个动画主题，用于系统化优化网站动画效果。各主题在本文件内展开说明。
+
+## 模块列表
+
+| 模块 | 定位 | 核心能力 |
 |------|------|----------|
-| **gsap-core** | GSAP 鏍稿績鍩虹 | Tween/Timeline 鍩虹鍔ㄧ敾銆乪asing 鏇茬嚎銆佸姩鐢绘帶鍒舵柟娉?|
-| **gsap-timeline** | 鏃堕棿绾跨紪鎺?| 澶嶆潅鍔ㄧ敾搴忓垪缂栨帓銆佸祵濂楁椂闂寸嚎銆乸osition 鍙傛暟 |
-| **gsap-scrolltrigger** | 婊氬姩椹卞姩 | 婊氬姩瑙﹀彂鍔ㄧ敾銆乸in 鍥哄畾銆乻crub 缁戝畾銆佽宸晥鏋?|
-| **gsap-plugins** | 鎻掍欢鐢熸€?| ScrollTrigger銆丼plitText銆丮orphSVG銆丏rawSVG銆丗lip |
-| **gsap-react** | React 闆嗘垚 | useGSAP hook銆乽seRef 缁戝畾銆丼SR 瀹夊叏銆乧leanup 绠＄悊 |
-| **gsap-performance** | 鎬ц兘浼樺寲 | will-change銆乺equestAnimationFrame銆乨ebounce ScrollTrigger銆丟PU 鍔犻€?|
-| **gsap-utils** | 宸ュ叿鍑芥暟 | 闅忔満鍊笺€乵apRange銆佷氦閿欏姩鐢汇€佸搷搴斿紡鍔ㄧ敾鍙傛暟 |
-| **gsap-3d** | 3D 鍔ㄧ敾 | Three.js + GSAP 鍗忓悓銆乄ebGL 鍦烘櫙鍔ㄧ敾銆?D 鐩告満璺緞 |
+| **gsap-core** | GSAP 核心基础 | Tween/Timeline 基础动画、easing 曲线、动画控制方法 |
+| **gsap-timeline** | 时间线编排 | 复杂动画序列编排、嵌套时间线、position 参数 |
+| **gsap-scrolltrigger** | 滚动驱动 | 滚动触发动画、pin 固定、scrub 绑定、视差效果 |
+| **gsap-plugins** | 插件生态 | ScrollTrigger、SplitText、MorphSVG、DrawSVG、Flip |
+| **gsap-react** | React 集成 | useGSAP hook、useRef 绑定、SSR 安全、cleanup 管理 |
+| **gsap-performance** | 性能优化 | will-change、requestAnimationFrame、debounce ScrollTrigger、GPU 加速 |
+| **gsap-utils** | 工具函数 | 随机值、mapRange、交错动画、响应式动画参数 |
+| **gsap-3d** | 3D 动画 | Three.js + GSAP 协同、WebGL 场景动画、3D 相机路径 |
 
-## 鍔ㄧ敾瑙﹀彂鍦烘櫙
+## 动画触发场景
 
-鏍规嵁 `frontend-design` 鎶€鑳戒腑鐨勫姩鐢绘寚鍗楋紝GSAP 浣撶郴搴旂敤浜庯細
+根据 `frontend-design` 技能中的动画指南，GSAP 体系应用于：
 
-1. **Hero 鍏ュ満鍔ㄧ敾**: 浣跨敤 gsap-core + gsap-timeline 缂栨帓澶氬厓绱犱氦閿欏叆鍦?2. **婊氬姩鎻ず**: 浣跨敤 gsap-scrolltrigger + gsap-plugins (SplitText) 瀹炵幇閫愬瓧/閫愯鎻ず
-3. **椤甸潰鍒囨崲**: 浣跨敤 gsap-core + gsap-3d 瀹炵幇 Page Transition
-4. **寰氦浜?*: 浣跨敤 gsap-core + gsap-react 瀹炵幇 spring 鐗╃悊鏇茬嚎鍔ㄧ敾
-5. **瑙嗗樊鏁堟灉**: 浣跨敤 gsap-scrolltrigger 澶氬眰瑙嗗樊 + scrub
+1. **Hero 入场动画**: 使用 gsap-core + gsap-timeline 编排多元素交错入场
+2. **滚动揭示**: 使用 gsap-scrolltrigger + gsap-plugins (SplitText) 实现逐字/逐行揭示
+3. **页面切换**: 使用 gsap-core + gsap-3d 实现 Page Transition
+4. **微交互**: 使用 gsap-core + gsap-react 实现 spring 物理曲线动画
+5. **视差效果**: 使用 gsap-scrolltrigger 多层视差 + scrub
 
-## 鎬ц兘绾︽潫
+## 性能约束
 
-- 鍔ㄧ敾浠呬娇鐢?`transform` 鍜?`opacity`锛岄伩鍏嶈Е鍙?layout
-- `will-change` 浠呭湪鍔ㄧ敾鏈熼棿鍚敤锛岀粨鏉熷悗绉婚櫎
-- ScrollTrigger 浣跨敤 `debounce` 鎴?`clamp` 闃叉楂橀瑙﹀彂
-- 绉诲姩绔檷浣庡姩鐢诲鏉傚害锛堝噺灏戝悓鏃跺姩鐢诲厓绱犳暟锛?
-## 涓庡墠绔妧鑳戒綋绯荤殑鍗忎綔
+- 动画仅使用 `transform` 和 `opacity`，避免触发 layout
+- `will-change` 仅在动画期间启用，结束后移除
+- ScrollTrigger 使用 `debounce` 或 `clamp` 防止高频触发
+- 移动端降低动画复杂度（减少同时动画元素数）
+
+## 与前端技能体系的协作
 
 ```
-frontend-design (鍐冲畾鍔ㄧ敾椋庢牸鏂瑰悜)
-    鈫?theme-factory / ui-ux-pro-max (閰嶈壊鍜屽瓧浣?
-    鈫?gsap-skill (瀹炵幇鍏蜂綋鍔ㄧ敾)
-    鈫?vercel-agent-skills (鎬ц兘鍜岃川閲忓鏌?
-    鈫?impeccable (鍔ㄧ敾缁嗚妭鎵撶（)
-    鈫?accesslint (reduced-motion 鍏煎妫€鏌?
+frontend-design (决定动画风格方向)
+    ↓
+theme-factory / ui-ux-pro-max (配色和字体)
+    ↓
+gsap-skill (实现具体动画)
+    ↓
+vercel-agent-skills (性能和质量审查)
+    ↓
+impeccable (动画细节打磨)
+    ↓
+accesslint (reduced-motion 兼容检查)
 ```
 
-## 缁勫悎寤鸿
+## 组合建议
 
-- **钀ラ攢钀藉湴椤?*: `frontend-design` + gsap-scrolltrigger + gsap-timeline
-- **SaaS 浜у搧**: gsap-react + `vercel-agent-skills`
-- **鍒涙剰浣滃搧闆?*: `frontend-design` (Brutalism/鏋佺箒) + gsap-3d + gsap-plugins
-- **鍝佺墝瀹樼綉**: gsap-timeline + gsap-scrolltrigger + `impeccable` (鍔ㄧ敾鎵撶（)
+- **营销落地页**: `frontend-design` + gsap-scrolltrigger + gsap-timeline
+- **SaaS 产品**: gsap-react + `vercel-agent-skills`
+- **创意作品集**: `frontend-design` (Brutalism/极繁) + gsap-3d + gsap-plugins
+- **品牌官网**: gsap-timeline + gsap-scrolltrigger + `impeccable` (动画打磨)

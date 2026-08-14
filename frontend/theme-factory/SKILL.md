@@ -3,20 +3,22 @@ name: theme-factory
 description: Rapid theme application with 10 professionally designed themes including complete color schemes and font pairings. Use when needing to quickly unify visual style, when starting a new project with a pre-made look, or when exploring design directions before committing to custom branding.
 ---
 
-# Theme Factory 鈥?涓婚宸ュ巶
+# Theme Factory — 主题工厂
 
-## 姒傝堪
+## 概述
 
-鎻愪緵 10 濂楃簿蹇冭璁＄殑涓撲笟涓婚锛屾瘡濂楀寘鍚細
-- 瀹屾暣鐨?CSS 鍙橀噺鑹插僵鏂规
-- 瀛椾綋閰嶅
-- 閫傜敤鍦烘櫙璇存槑
+提供 10 套精心设计的专业主题，每套包含：
+- 完整的 CSS 变量色彩方案
+- 字体配对
+- 适用场景说明
 
-鍙笌 `frontend-design` 缁撳悎纭繚鏃㈡湁鐙壒璁捐鍙堜繚鎸佽瑙変竴鑷存€с€?
-## 涓婚鍒楄〃
+可与 `frontend-design` 结合确保既有独特设计又保持视觉一致性。
 
-### 1. Ocean Depths (娴锋磱娣卞)
-**姘涘洿**: 鍐烽潤銆佷笓涓氥€佷俊浠?**閫傜敤**: 閲戣瀺绉戞妧銆丅2B銆佷紒涓?SaaS
+## 主题列表
+
+### 1. Ocean Depths (海洋深处)
+**氛围**: 冷静、专业、信任
+**适用**: 金融科技、B2B、企业 SaaS
 
 ```css
 :root {
@@ -38,8 +40,10 @@ description: Rapid theme application with 10 professionally designed themes incl
 }
 ```
 
-### 2. Sunset Terracotta (鏃ヨ惤闄跺湡)
-**姘涘洿**: 娓╂殩銆佹椿鍔涖€佷翰鍒?**閫傜敤**: 鐢靛晢銆佺敓娲绘柟寮忓搧鐗屻€侀楗?
+### 2. Sunset Terracotta (日落陶土)
+**氛围**: 温暖、活力、亲切
+**适用**: 电商、生活方式品牌、餐饮
+
 ```css
 :root {
   --color-primary: #E07A5F;
@@ -60,8 +64,10 @@ description: Rapid theme application with 10 professionally designed themes incl
 }
 ```
 
-### 3. Forest Canopy (妫灄鍗庣洊)
-**姘涘洿**: 鑷劧銆佸彲鎸佺画銆佸钩闈?**閫傜敤**: 鍋ュ悍銆佺幆淇濄€佹湁鏈哄搧鐗?
+### 3. Forest Canopy (森林华盖)
+**氛围**: 自然、可持续、平衡
+**适用**: 健康、环保、有机品牌
+
 ```css
 :root {
   --color-primary: #2D6A4F;
@@ -82,8 +88,9 @@ description: Rapid theme application with 10 professionally designed themes incl
 }
 ```
 
-### 4. Midnight Ink (鍗堝澧ㄨ壊)
-**姘涘洿**: 楂樼銆佺绉樸€佸ア鍗?**閫傜敤**: 濂緢鍝佺墝銆佷綔鍝侀泦銆佸垱鎰忓伐浣滃
+### 4. Midnight Ink (午夜墨色)
+**氛围**: 高端、神秘、奢华
+**适用**: 奢侈品牌、作品集、创意工作室
 
 ```css
 :root {
@@ -105,8 +112,9 @@ description: Rapid theme application with 10 professionally designed themes incl
 }
 ```
 
-### 5. Tech Innovation (绉戞妧鍒涙柊)
-**姘涘洿**: 鐜颁唬銆佹瀬绠€銆佸墠娌?**閫傜敤**: AI 浜у搧銆佸紑鍙戣€呭伐鍏枫€乄eb3
+### 5. Tech Innovation (科技创新)
+**氛围**: 现代、极简、前卫
+**适用**: AI 产品、开发者工具、Web3
 
 ```css
 :root {
@@ -128,8 +136,10 @@ description: Rapid theme application with 10 professionally designed themes incl
 }
 ```
 
-### 6. Rose Gold (鐜懓閲?
-**姘涘洿**: 浼橀泤銆佸コ鎬у寲銆佹煍鍜?**閫傜敤**: 缇庡銆佹椂灏氥€佸搴?
+### 6. Rose Gold (玫瑰金)
+**氛围**: 优雅、女性化、柔和
+**适用**: 美妆、时尚、婚礼
+
 ```css
 :root {
   --color-primary: #B76E79;
@@ -150,8 +160,10 @@ description: Rapid theme application with 10 professionally designed themes incl
 }
 ```
 
-### 7. Industrial Steel (宸ヤ笟閽㈤搧)
-**姘涘洿**: 绮楃姺銆佸姏閲忋€佷笓涓?**閫傜敤**: 鍒堕€犱笟銆丅2B銆佸缓绛?
+### 7. Industrial Steel (工业钢铁)
+**氛围**: 粗犷、力量、专业
+**适用**: 制造业、B2B、建筑
+
 ```css
 :root {
   --color-primary: #1A1A1A;
@@ -172,8 +184,10 @@ description: Rapid theme application with 10 professionally designed themes incl
 }
 ```
 
-### 8. Lavender Mist (钖拌。鑽夎杽闆?
-**姘涘洿**: 鏌旇蒋銆佹ⅵ骞汇€佸垱鎰?**閫傜敤**: 鏁欒偛銆佸績鐞嗗仴搴枫€佸効绔?
+### 8. Lavender Mist (薰衣草薄雾)
+**氛围**: 柔软、梦幻、创意
+**适用**: 教育、心理健康、儿童
+
 ```css
 :root {
   --color-primary: #7C5CBF;
@@ -194,8 +208,9 @@ description: Rapid theme application with 10 professionally designed themes incl
 }
 ```
 
-### 9. Neon Noir (闇撹櫣鏆楀)
-**姘涘洿**: 璧涘崥鏈嬪厠銆佹湭鏉ユ劅銆佹父鎴?**閫傜敤**: 娓告垙銆佺數瀛愮珵鎶€銆乄eb3/NFT
+### 9. Neon Noir (霓虹暗夜)
+**氛围**: 赛博朋克、未来感、游戏
+**适用**: 游戏、电子竞技、Web3/NFT
 
 ```css
 :root {
@@ -217,8 +232,10 @@ description: Rapid theme application with 10 professionally designed themes incl
 }
 ```
 
-### 10. Warm Minimal (娓╂殩鏋佺畝)
-**姘涘洿**: 鐜颁唬銆佽垝閫傘€佸寳娆?**閫傜敤**: SaaS銆佽璁″伐鍏枫€佺敓娲绘柟寮?
+### 10. Warm Minimal (温暖极简)
+**氛围**: 现代、舒适、北欧
+**适用**: SaaS、设计工具、生活方式
+
 ```css
 :root {
   --color-primary: #2D3436;
@@ -239,24 +256,29 @@ description: Rapid theme application with 10 professionally designed themes incl
 }
 ```
 
-## 浣跨敤鏂瑰紡
+## 使用方式
 
-1. 閫夋嫨鏈€鍖归厤椤圭洰姘旇川鐨勪富棰?2. 澶嶅埗瀵瑰簲鐨?CSS 鍙橀噺
-3. 鍦ㄥ叏绔欎娇鐢ㄨ繖浜涘彉閲忥紙涓嶇‖缂栫爜棰滆壊锛?4. 鍙寜闇€寰皟涓婚鑹诧紝浣嗕繚鎸佸彉閲忕粨鏋?
-## 涓婚閫夋嫨鍐崇瓥
+1. 选择最匹配项目气质的主题
+2. 复制对应的 CSS 变量
+3. 在全站使用这些变量（不硬编码颜色）
+4. 可按需微调主题色，但保持变量结构
 
-| 椤圭洰绫诲瀷 | 鎺ㄨ崘涓婚 |
+## 主题选择决策
+
+| 项目类型 | 推荐主题 |
 |----------|----------|
 | B2B SaaS | Ocean Depths / Warm Minimal |
-| 鐢靛晢 | Sunset Terracotta / Rose Gold |
-| 鐜繚/鍋ュ悍 | Forest Canopy |
-| 濂緢鍝佺墝 | Midnight Ink |
+| 电商 | Sunset Terracotta / Rose Gold |
+| 环保/健康 | Forest Canopy |
+| 奢侈品牌 | Midnight Ink |
 | Web3/NFT | Neon Noir / Tech Innovation |
-| 娓告垙 | Neon Noir |
-| 寤虹瓚/宸ヤ笟 | Industrial Steel |
-| 鏁欒偛 | Lavender Mist |
-| AI/鎶€鏈?| Tech Innovation |
+| 游戏 | Neon Noir |
+| 建筑/工业 | Industrial Steel |
+| 教育 | Lavender Mist |
+| AI/技术 | Tech Innovation |
 
-## 缁勫悎寤鸿
+## 组合建议
 
-- **蹇€熷惎鍔?*: 鏈妧鑳界嫭绔嬩娇鐢ㄩ€変富棰?- **鐙壒椋庢牸**: 鍏?`frontend-design` 纭畾鏂瑰悜锛屽啀鏈妧鑳介€夐厤鑹茶捣鐐?- **瀹屾暣鏂规**: 鏈妧鑳?+ `ui-ux-pro-max`锛?7 椋庢牸 + 95 閰嶈壊鎵╁睍閫夋嫨锛?
+- **快速启动**: 本技能独立使用选主题
+- **独特风格**: 先 `frontend-design` 确定方向，再本技能选配色起点
+- **完整方案**: 本技能 + `ui-ux-pro-max`（79 风格 + 192 配色扩展选择）
