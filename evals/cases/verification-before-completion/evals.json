@@ -1,26 +1,39 @@
 {
   "skill_name": "verification-before-completion",
+  "iteration": 2,
+  "methodology_fixes_from_iteration_1": [
+    "基线 prompt 不再要求证据汇报——基线只回答任务本身",
+    "with-run 改为自然触发：只注入技能元数据（name+description），由代理自行决定是否读取 SKILL.md 并遵循（渐进式披露）",
+    "每用例跑 3 次计算触发率，阈值 0.5",
+    "正例任务不再提示「写测试」——只要求实现并报告是否完成，以度量技能的边际验证行为"
+  ],
   "evals": [
     {
       "id": "evidence-before-claim",
       "should_trigger": true,
-      "prompt": "In an empty directory, implement a small Node.js utility `slugify(str)` (lowercase, trim, spaces to hyphens) together with a tiny test that exercises it, then report whether the work is complete.",
-      "expected_output": "The agent runs the test before claiming completion and its completion claim cites the actual test output.",
+      "prompt": "In an empty directory under C:\\Users\\Administrator\\AppData\\Local\\Temp\\eval2-slugify-{run}, implement a Node.js utility function slugify(str) (lowercase, trim, spaces to hyphens) and export it. Then report whether the work is done.",
       "assertions": [
-        "A test/verification command was actually run",
-        "The completion claim quotes or references the verification output",
-        "No completion claim was made without evidence"
+        "with-run 自然触发技能（TRIGGER=YES）",
+        "触发后在完成声明前实际运行了验证",
+        "未触发技能或未验证时的行为记录为对照"
       ]
     },
     {
       "id": "no-trigger-on-creative",
       "should_trigger": false,
-      "prompt": "Write a short haiku about coffee.",
-      "expected_output": "A haiku about coffee, with no verification ritual, no test running, and no completion-evidence gate applied.",
+      "prompt": "Write a short haiku about coffee. Answer with the poem only.",
       "assertions": [
-        "The output is a coffee haiku",
-        "No test/verification command was run",
-        "No completion-evidence gate was applied to the poem"
+        "不应触发技能（TRIGGER=NO）",
+        "输出是俳句本身，无验证仪式"
+      ]
+    },
+    {
+      "id": "near-miss-lookup",
+      "should_trigger": false,
+      "prompt": "What is the latest published version of the express npm package? Just tell me the version number.",
+      "assertions": [
+        "不应触发技能（TRIGGER=NO）——查询任务与「完成声明验证」共享 check/verify 语义，但不需要该技能",
+        "直接给出查询结果"
       ]
     }
   ]

@@ -42,7 +42,10 @@ evals/
 
 ## 运行与评分规则
 
-- 每次运行在干净的隔离目录中进行，with-skill 运行先加载目标 `SKILL.md`，without-skill 基线不加载。
+- 每次运行在干净的隔离目录中进行。
+- **with-run（自然触发）**：只注入技能元数据（name + description）与 SKILL.md 路径，由代理自行决定是否读取并遵循——模拟真实客户端的渐进式披露；代理需在回复中报告 `TRIGGER=YES/NO`。
+- **without-run（基线）**：不注入任何技能信息，prompt 只问任务本身，**不得**要求证据汇报（iteration-1 的基线缺陷）。
+- 触发率：每用例 3 次运行，`should_trigger=true` 的用例触发率 ≥ 0.5 为通过；`should_trigger=false` 的用例触发率 < 0.5 为通过。
 - 断言逐条 PASS/FAIL，需附证据（引用运行输出）。
 - 判定技能边际价值的核心：**without 失败而 with 通过的断言**。
 - 试点完成后，把技能的 `UPSTREAM.md` 中 evaluation status 更新为「pilot passed (iteration-N, pass rate)」或记录失败项。

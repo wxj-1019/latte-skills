@@ -8,4 +8,4 @@
 - **Local modifications**:
   - Added `license: MIT` frontmatter field.
   - Softened the "same message fresh run" rule to "complete evidence from after the last relevant change", to remain correct when the host runs verification in a separate message/toolcall.
-- **Evaluation status**: pilot run completed (iteration-1, 2026-08-14). Rules execute coherently when activated, but the pilot methodology forced activation and induced baseline verification, so trigger precision and marginal value remain unmeasured. See `evals/results/iteration-1/verification-before-completion/grading.json`.
+- **Evaluation status**: iteration-2 passed the trigger gate (2026-08-14): positive recall 3/3, creative negative 0/3, near-miss negative 1/3 (0.33, below threshold — flagged). Overall trigger accuracy 8/9. Marginal-value delta vs baseline remains unmeasurable on simple tasks; needs harder cases. See `evals/results/iteration-2/verification-before-completion/grading.json`.
