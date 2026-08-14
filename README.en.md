@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/brews-24-%23c98f2c"></a>
+  <a href="#"><img src="https://img.shields.io/badge/brews-25-%23c98f2c"></a>
   <a href="#"><img src="https://img.shields.io/badge/ZCode%20%C2%B7%20Claude%20Code%20%C2%B7%20Codex-compatible-success"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT%20(self--built)-blue"></a>
   <a href="https://github.com/wxj-1019/latte-skills/commits"><img src="https://img.shields.io/github/last-commit/wxj-1019/latte-skills"></a>
@@ -131,6 +131,12 @@ cp -r latte-skills/frontend/frontend-design ~/.zcode/skills/
 |---|:---:|---|
 | **architecture-decision-records** | ☕ | Evidence-first ADRs: context/decision/consequences/alternatives with rejection reasons (self-roasted rewrite) |
 
+### <img src="assets/icons/database.svg" width="16"> `backend/` — Backend & Data (1 brew)
+
+| Blend | Strength | Flavor |
+|---|:---:|---|
+| **supabase-postgres-best-practices** | ☕☕☕ | Postgres engineering: schema/migrations/indexes/RLS/locks/pooling/monitoring (Supabase official, MIT, 35 progressive references) |
+
 <!--
 Future shelves: ### 🛠️ backend/
 -->
@@ -198,7 +204,9 @@ latte-skills/
 │   └── specification-and-acceptance/  ☕☕ spec & acceptance
 ├── architecture/          ← architecture decisions shelf (1 brew)
 │   └── architecture-decision-records/  ☕ ADR records
-└── (future: backend/  …)
+├── backend/               ← backend & data shelf (1 brew)
+│   └── supabase-postgres-best-practices/  ☕☕☕ Postgres engineering
+└── (future: delivery/ operations/  …)
 ```
 
 ---
@@ -238,6 +246,7 @@ Every bean is sourced from an open-source estate and keeps its origin license:
 | `performance-optimization` | MIT (addyosmani/agent-skills) |
 | `security-and-hardening` / `code-review-and-quality` | MIT (self-roasted rewrite, see per-skill UPSTREAM.md) |
 | `mcp-builder` / `claude-api` | Apache 2.0 (anthropics/skills, LICENSE.txt kept in-dir) |
+| `supabase-postgres-best-practices` | MIT (supabase/agent-skills) |
 | other upstream beans | see each origin's LICENSE |
 
 The **self-roasted content** — `frontend-skills-hub/` and its 6 blends, the READMEs, the shop sign, and scaffolding — is **MIT-licensed** (see root [LICENSE](LICENSE)). Upstream beans under `frontend/` keep their own licenses.
