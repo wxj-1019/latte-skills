@@ -8,4 +8,4 @@
 - **Local modifications**:
   - Added `license: MIT` frontmatter field.
   - Softened the "same message fresh run" rule to "complete evidence from after the last relevant change", to remain correct when the host runs verification in a separate message/toolcall.
-- **Evaluation status**: not yet evaluated against the curation gate (see `CURATION.md`).
+- **Evaluation status**: pilot run completed (iteration-1, 2026-08-14). Rules execute coherently when activated, but the pilot methodology forced activation and induced baseline verification, so trigger precision and marginal value remain unmeasured. See `evals/results/iteration-1/verification-before-completion/grading.json`.

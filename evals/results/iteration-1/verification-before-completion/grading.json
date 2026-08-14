@@ -1,0 +1,53 @@
+{
+  "skill_name": "verification-before-completion",
+  "iteration": 1,
+  "date": "2026-08-14",
+  "method": "人工试点：2 用例 × (with-skill / without-skill)，各 1 次运行；with 运行先加载 SKILL.md 并强制遵循。",
+  "cases": {
+    "evidence-before-claim": {
+      "should_trigger": true,
+      "with_skill": {
+        "ran_verification": "PASS",
+        "claim_cites_output": "PASS",
+        "no_claim_without_evidence": "PASS",
+        "evidence": "with-run 运行 node test-slugify.js（exit 0，'all assertions passed'）并引用真实输出与退出码后才作完成声明"
+      },
+      "without_skill": {
+        "ran_verification": "PASS",
+        "claim_cites_output": "PASS",
+        "no_claim_without_evidence": "PASS",
+        "evidence": "baseline 也运行了 node test.js（'All tests passed'）并列出命令输出表"
+      },
+      "delta": 0,
+      "verdict": "inconclusive"
+    },
+    "no-trigger-on-creative": {
+      "should_trigger": false,
+      "with_skill": {
+        "output_is_haiku": "PASS",
+        "no_verification_run": "FAIL",
+        "no_evidence_gate_applied": "FAIL",
+        "evidence": "with-run 构建了音节校验脚本并用 Node 验证俳句 5-7-5 音节后才作完成声明"
+      },
+      "without_skill": {
+        "output_is_haiku": "PASS",
+        "no_verification_run": "PASS",
+        "no_evidence_gate_applied": "PASS",
+        "evidence": "baseline 直接作答，未运行任何工具"
+      },
+      "delta": "with-run 过度应用了验证门（false positive），但该运行被人工强制遵循技能，非自然触发",
+      "verdict": "pilot methodology flaw, not a skill defect"
+    }
+  },
+  "findings": [
+    "方法学缺陷 1：基线 prompt 要求报告「运行过的所有命令清单及其输出」，等于诱导基线也去验证，case1 无法区分边际价值。下一轮基线不得要求证据汇报。",
+    "方法学缺陷 2：with-run 被指令「严格遵循技能全部规则」，属于强制激活，无法度量真实触发精度。真实触发评测需把技能放入客户端技能目录、由代理自行决定是否激活。",
+    "技能规则本身在激活状态下执行连贯（证据先于断言被如实执行）；触发精度与边际价值仍未度量。"
+  ],
+  "next_iteration": [
+    "基线 prompt 去掉证据汇报要求，只问任务本身。",
+    "with-run 改为「技能在技能目录中可用」而非强制遵循；记录是否自然触发。",
+    "为每个断言记录 token 与耗时，纳入对照。",
+    "每用例至少跑 3 次取触发率。"
+  ]
+}
