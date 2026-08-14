@@ -1,0 +1,27 @@
+{
+  "skill_name": "verification-before-completion",
+  "evals": [
+    {
+      "id": "evidence-before-claim",
+      "should_trigger": true,
+      "prompt": "In an empty directory, implement a small Node.js utility `slugify(str)` (lowercase, trim, spaces to hyphens) together with a tiny test that exercises it, then report whether the work is complete.",
+      "expected_output": "The agent runs the test before claiming completion and its completion claim cites the actual test output.",
+      "assertions": [
+        "A test/verification command was actually run",
+        "The completion claim quotes or references the verification output",
+        "No completion claim was made without evidence"
+      ]
+    },
+    {
+      "id": "no-trigger-on-creative",
+      "should_trigger": false,
+      "prompt": "Write a short haiku about coffee.",
+      "expected_output": "A haiku about coffee, with no verification ritual, no test running, and no completion-evidence gate applied.",
+      "assertions": [
+        "The output is a coffee haiku",
+        "No test/verification command was run",
+        "No completion-evidence gate was applied to the poem"
+      ]
+    }
+  ]
+}

@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/brews-25-%23c98f2c"></a>
+  <a href="#"><img src="https://img.shields.io/badge/brews-27-%23c98f2c"></a>
   <a href="#"><img src="https://img.shields.io/badge/ZCode%20%C2%B7%20Claude%20Code%20%C2%B7%20Codex-compatible-success"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT%20(self--built)-blue"></a>
   <a href="https://github.com/wxj-1019/latte-skills/commits"><img src="https://img.shields.io/github/last-commit/wxj-1019/latte-skills"></a>
@@ -131,11 +131,13 @@ cp -r latte-skills/frontend/frontend-design ~/.zcode/skills/
 |---|:---:|---|
 | **architecture-decision-records** | ☕ | 证据优先的 ADR：上下文/决策/后果/备选项与否决理由（自烘改写） |
 
-### <img src="assets/icons/database.svg" width="16"> `backend/` — 后端与数据（1 杯）
+### <img src="assets/icons/database.svg" width="16"> `backend/` — 后端与数据（3 杯）
 
 | 拼配 | 浓度 | 风味 |
 |---|:---:|---|
 | **supabase-postgres-best-practices** | ☕☕☕ | Postgres 工程实践：schema/迁移/索引/RLS/锁/连接池/监控（Supabase 官方，MIT，渐进式 35 篇 references） |
+| **api-contract-design** | ☕☕ | 契约优先的 HTTP API 设计：错误模型/幂等/分页/版本化/契约测试（自烘） |
+| **database-migrations** | ☕☕ | 安全 schema 演进：expand/contract、分批回填、引擎差异速查（自烘） |
 
 <!--
 未来拼配柜：### 🛠️ backend/
@@ -204,8 +206,10 @@ latte-skills/
 │   └── specification-and-acceptance/  ☕☕ 规格与验收
 ├── architecture/          ← 架构决策柜（1 杯）
 │   └── architecture-decision-records/  ☕ ADR 决策记录
-├── backend/               ← 后端与数据柜（1 杯）
-│   └── supabase-postgres-best-practices/  ☕☕☕ Postgres 工程实践
+├── backend/               ← 后端与数据柜（3 杯）
+│   ├── supabase-postgres-best-practices/  ☕☕☕ Postgres 工程实践
+│   ├── api-contract-design/       ☕☕ API 契约设计
+│   └── database-migrations/       ☕☕ 安全迁移
 └── （未来: delivery/ operations/  …）
 ```
 
@@ -247,6 +251,7 @@ git add -A && git commit -m "feat: 新豆 <技能名>" && git push
 | `security-and-hardening` / `code-review-and-quality` | MIT（自烘重写，溯源见各 UPSTREAM.md） |
 | `mcp-builder` / `claude-api` | Apache 2.0（anthropics/skills，随目录保留 LICENSE.txt） |
 | `supabase-postgres-best-practices` | MIT（supabase/agent-skills） |
+| `api-contract-design` / `database-migrations` | MIT（自烘，溯源见各 PROVENANCE.md） |
 | 其余上游豆 | 见各产地 LICENSE |
 
 **自烘内容**（`frontend-skills-hub/` 及其 6 杯拼配、README、招牌与脚手架）采用 **MIT 许可证**（见根目录 [LICENSE](LICENSE)）；`frontend/` 下上游豆保留各自原始许可。
