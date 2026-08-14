@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/brews-17-%23c98f2c"></a>
+  <a href="#"><img src="https://img.shields.io/badge/brews-20-%23c98f2c"></a>
   <a href="#"><img src="https://img.shields.io/badge/ZCode%20%C2%B7%20Claude%20Code%20%C2%B7%20Codex-compatible-success"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT%20(self--built)-blue"></a>
   <a href="https://github.com/wxj-1019/latte-skills/commits"><img src="https://img.shields.io/github/last-commit/wxj-1019/latte-skills"></a>
@@ -99,18 +99,21 @@ cp -r latte-skills/frontend/frontend-design ~/.zcode/skills/
 |---|:---:|---|
 | **readme-makeover** | ☕☕ | Turn a bland/templated README into a branded, hero-led, scannable landing page: mine a brand metaphor → animated SVG banner → badges → strong structure → LICENSE/.gitattributes. See `general/readme-makeover/` (this very README was brewed with it ☕) |
 
-### <img src="assets/icons/shield-check.svg" width="16"> `quality/` — Quality & Verification (2 brews)
+### <img src="assets/icons/shield-check.svg" width="16"> `quality/` — Quality & Verification (4 brews)
 
 | Blend | Strength | Flavor |
 |---|:---:|---|
 | **verification-before-completion** | ☕ | Fresh verification evidence required before any completion claim (obra/superpowers, adapted) |
 | **systematic-debugging** | ☕☕ | Four-phase root-cause process: reproduce → pattern analysis → hypothesis → fix (obra/superpowers, adapted) |
+| **test-driven-development** | ☕☕ | Red-Green-Refactor discipline + test-quality guide (obra/superpowers, adapted) |
+| **performance-optimization** | ☕☕ | Measure → single-variable → retest → revert empirical loop (addyosmani, adapted) |
 
-### <img src="assets/icons/chip.svg" width="16"> `ai-development/` — AI Development (1 brew)
+### <img src="assets/icons/chip.svg" width="16"> `ai-development/` — AI Development (2 brews)
 
 | Blend | Strength | Flavor |
 |---|:---:|---|
 | **mcp-builder** | ☕☕ | MCP server construction: dual outputs, tool annotations, evaluation method (Anthropic original, Apache-2.0) |
+| **claude-api** | ☕☕☕ | Claude/Anthropic API knowledge pack across languages (install on demand, synced quarterly, Apache-2.0) |
 
 <!--
 Future shelves: ### 🛠️ backend/
@@ -133,6 +136,7 @@ Skills aren't buttons — they're **flavor primers for the AI**. Two ways to ord
 | "Add charts / data viz to this page or dashboard" | `bklit-ui` |
 | "Self-check before completion / pre-commit verification" | `verification-before-completion` |
 | "This bug has resisted debugging for a while" | `systematic-debugging` |
+| "Implementing a feature / fixing a bug with test coverage" | `test-driven-development` |
 | "Check this UI against web guidelines" | `web-design-guidelines` |
 
 **2. Order by name:** `/frontend-design`, `/impeccable`, `/ui-ux-pro-max` …
@@ -164,11 +168,14 @@ latte-skills/
 │   └── frontend-skills-hub/     ← routing hub (no nested skills)
 ├── general/                ← general-purpose shelf
 │   └── readme-makeover/        ☕☕ README makeover (SKILL.md + references/)
-├── quality/                ← quality & verification shelf (2 brews)
+├── quality/                ← quality & verification shelf (4 brews)
 │   ├── verification-before-completion/  ☕ verify before claiming done
-│   └── systematic-debugging/      ☕☕ root-cause debugging
-├── ai-development/        ← AI development shelf (1 brew)
-│   └── mcp-builder/             ☕☕ MCP server construction
+│   ├── systematic-debugging/      ☕☕ root-cause debugging
+│   ├── test-driven-development/   ☕☕ TDD discipline
+│   └── performance-optimization/  ☕☕ empirical optimization
+├── ai-development/        ← AI development shelf (2 brews)
+│   ├── mcp-builder/             ☕☕ MCP server construction
+│   └── claude-api/              ☕☕☕ Claude API knowledge pack
 └── (future: backend/  …)
 ```
 
@@ -205,8 +212,9 @@ Every bean is sourced from an open-source estate and keeps its origin license:
 | `ui-ux-pro-max` | MIT |
 | `impeccable` | Apache 2.0 |
 | `bklit-ui` | MIT |
-| `verification-before-completion` / `systematic-debugging` | MIT (obra/superpowers) |
-| `mcp-builder` | Apache 2.0 (anthropics/skills, LICENSE.txt kept in-dir) |
+| `verification-before-completion` / `systematic-debugging` / `test-driven-development` | MIT (obra/superpowers) |
+| `performance-optimization` | MIT (addyosmani/agent-skills) |
+| `mcp-builder` / `claude-api` | Apache 2.0 (anthropics/skills, LICENSE.txt kept in-dir) |
 | other upstream beans | see each origin's LICENSE |
 
 The **self-roasted content** — `frontend-skills-hub/` and its 6 blends, the READMEs, the shop sign, and scaffolding — is **MIT-licensed** (see root [LICENSE](LICENSE)). Upstream beans under `frontend/` keep their own licenses.

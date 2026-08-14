@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/brews-17-%23c98f2c"></a>
+  <a href="#"><img src="https://img.shields.io/badge/brews-20-%23c98f2c"></a>
   <a href="#"><img src="https://img.shields.io/badge/ZCode%20%C2%B7%20Claude%20Code%20%C2%B7%20Codex-compatible-success"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT%20(self--built)-blue"></a>
   <a href="https://github.com/wxj-1019/latte-skills/commits"><img src="https://img.shields.io/github/last-commit/wxj-1019/latte-skills"></a>
@@ -99,18 +99,21 @@ cp -r latte-skills/frontend/frontend-design ~/.zcode/skills/
 |---|:---:|---|
 | **readme-makeover** | ☕☕ | 把平庸/模板化的 README 改造成有品牌、有主视觉、可扫读的落地页：挖品牌隐喻 → 动画 SVG 招牌 → 徽章 → 强结构 → LICENSE/.gitattributes。详见 `general/readme-makeover/`（本 README 即由它出品 ☕） |
 
-### <img src="assets/icons/shield-check.svg" width="16"> `quality/` — 质量与验证（2 杯）
+### <img src="assets/icons/shield-check.svg" width="16"> `quality/` — 质量与验证（4 杯）
 
 | 拼配 | 浓度 | 风味 |
 |---|:---:|---|
 | **verification-before-completion** | ☕ | 完成声明前强制出示最新验证证据（obra/superpowers，适配） |
 | **systematic-debugging** | ☕☕ | 四阶段根因排查：复现 → 模式分析 → 假设验证 → 修复（obra/superpowers，适配） |
+| **test-driven-development** | ☕☕ | Red-Green-Refactor 纪律 + 测试质量指南（obra/superpowers，适配） |
+| **performance-optimization** | ☕☕ | 测量 → 单变量 → 复测 → 回退的实证优化闭环（addyosmani，适配） |
 
-### <img src="assets/icons/chip.svg" width="16"> `ai-development/` — AI 开发（1 杯）
+### <img src="assets/icons/chip.svg" width="16"> `ai-development/` — AI 开发（2 杯）
 
 | 拼配 | 浓度 | 风味 |
 |---|:---:|---|
 | **mcp-builder** | ☕☕ | MCP 服务器构建：双输出/工具注解/评测方法（Anthropic 原版，Apache-2.0） |
+| **claude-api** | ☕☕☕ | Claude/Anthropic API 全语言知识包（按需安装，定期同步上游，Apache-2.0） |
 
 <!--
 未来拼配柜：### 🛠️ backend/
@@ -133,6 +136,7 @@ cp -r latte-skills/frontend/frontend-design ~/.zcode/skills/
 | "给页面/后台加图表和数据可视化" | `bklit-ui` |
 | "完成前自查 / 提交前验证" | `verification-before-completion` |
 | "这个 bug 排查了很久没解决" | `systematic-debugging` |
+| "写新功能 / 修 bug，要测试覆盖" | `test-driven-development` |
 | "检查这 UI 是否符合 Web 规范" | `web-design-guidelines` |
 
 **2. 直点单品**：`/frontend-design`、`/impeccable`、`/ui-ux-pro-max` …
@@ -164,11 +168,14 @@ latte-skills/
 │   └── frontend-skills-hub/     ← 选路中心（无内嵌技能）
 ├── general/                ← 通用拼配柜
 │   └── readme-makeover/        ☕☕ README 改造术（SKILL.md + references/）
-├── quality/                ← 质量与验证柜（2 杯）
+├── quality/                ← 质量与验证柜（4 杯）
 │   ├── verification-before-completion/  ☕ 完成前验证
-│   └── systematic-debugging/      ☕☕ 根因排查
-├── ai-development/        ← AI 开发柜（1 杯）
-│   └── mcp-builder/             ☕☕ MCP 服务器构建
+│   ├── systematic-debugging/      ☕☕ 根因排查
+│   ├── test-driven-development/   ☕☕ TDD 纪律
+│   └── performance-optimization/  ☕☕ 实证优化
+├── ai-development/        ← AI 开发柜（2 杯）
+│   ├── mcp-builder/             ☕☕ MCP 服务器构建
+│   └── claude-api/              ☕☕☕ Claude API 知识包
 └── （未来: backend/  …）
 ```
 
@@ -205,8 +212,9 @@ git add -A && git commit -m "feat: 新豆 <技能名>" && git push
 | `ui-ux-pro-max` | MIT |
 | `impeccable` | Apache 2.0 |
 | `bklit-ui` | MIT |
-| `verification-before-completion` / `systematic-debugging` | MIT（obra/superpowers） |
-| `mcp-builder` | Apache 2.0（anthropics/skills，随目录保留 LICENSE.txt） |
+| `verification-before-completion` / `systematic-debugging` / `test-driven-development` | MIT（obra/superpowers） |
+| `performance-optimization` | MIT（addyosmani/agent-skills） |
+| `mcp-builder` / `claude-api` | Apache 2.0（anthropics/skills，随目录保留 LICENSE.txt） |
 | 其余上游豆 | 见各产地 LICENSE |
 
 **自烘内容**（`frontend-skills-hub/` 及其 6 杯拼配、README、招牌与脚手架）采用 **MIT 许可证**（见根目录 [LICENSE](LICENSE)）；`frontend/` 下上游豆保留各自原始许可。
