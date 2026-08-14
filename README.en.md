@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/brews-20-%23c98f2c"></a>
+  <a href="#"><img src="https://img.shields.io/badge/brews-22-%23c98f2c"></a>
   <a href="#"><img src="https://img.shields.io/badge/ZCode%20%C2%B7%20Claude%20Code%20%C2%B7%20Codex-compatible-success"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT%20(self--built)-blue"></a>
   <a href="https://github.com/wxj-1019/latte-skills/commits"><img src="https://img.shields.io/github/last-commit/wxj-1019/latte-skills"></a>
@@ -99,7 +99,7 @@ cp -r latte-skills/frontend/frontend-design ~/.zcode/skills/
 |---|:---:|---|
 | **readme-makeover** | ☕☕ | Turn a bland/templated README into a branded, hero-led, scannable landing page: mine a brand metaphor → animated SVG banner → badges → strong structure → LICENSE/.gitattributes. See `general/readme-makeover/` (this very README was brewed with it ☕) |
 
-### <img src="assets/icons/shield-check.svg" width="16"> `quality/` — Quality & Verification (4 brews)
+### <img src="assets/icons/shield-check.svg" width="16"> `quality/` — Quality & Verification (6 brews)
 
 | Blend | Strength | Flavor |
 |---|:---:|---|
@@ -107,6 +107,8 @@ cp -r latte-skills/frontend/frontend-design ~/.zcode/skills/
 | **systematic-debugging** | ☕☕ | Four-phase root-cause process: reproduce → pattern analysis → hypothesis → fix (obra/superpowers, adapted) |
 | **test-driven-development** | ☕☕ | Red-Green-Refactor discipline + test-quality guide (obra/superpowers, adapted) |
 | **performance-optimization** | ☕☕ | Measure → single-variable → retest → revert empirical loop (addyosmani, adapted) |
+| **security-and-hardening** | ☕☕ | Threat modeling + OWASP injection/auth/secrets/supply chain + LLM security (self-roasted rewrite) |
+| **code-review-and-quality** | ☕ | Five-axis review + unified severity levels + receiving feedback (self-roasted rewrite) |
 
 ### <img src="assets/icons/chip.svg" width="16"> `ai-development/` — AI Development (2 brews)
 
@@ -168,11 +170,13 @@ latte-skills/
 │   └── frontend-skills-hub/     ← routing hub (no nested skills)
 ├── general/                ← general-purpose shelf
 │   └── readme-makeover/        ☕☕ README makeover (SKILL.md + references/)
-├── quality/                ← quality & verification shelf (4 brews)
+├── quality/                ← quality & verification shelf (6 brews)
 │   ├── verification-before-completion/  ☕ verify before claiming done
 │   ├── systematic-debugging/      ☕☕ root-cause debugging
 │   ├── test-driven-development/   ☕☕ TDD discipline
-│   └── performance-optimization/  ☕☕ empirical optimization
+│   ├── performance-optimization/  ☕☕ empirical optimization
+│   ├── security-and-hardening/    ☕☕ security review
+│   └── code-review-and-quality/   ☕ code review
 ├── ai-development/        ← AI development shelf (2 brews)
 │   ├── mcp-builder/             ☕☕ MCP server construction
 │   └── claude-api/              ☕☕☕ Claude API knowledge pack
@@ -214,6 +218,7 @@ Every bean is sourced from an open-source estate and keeps its origin license:
 | `bklit-ui` | MIT |
 | `verification-before-completion` / `systematic-debugging` / `test-driven-development` | MIT (obra/superpowers) |
 | `performance-optimization` | MIT (addyosmani/agent-skills) |
+| `security-and-hardening` / `code-review-and-quality` | MIT (self-roasted rewrite, see per-skill UPSTREAM.md) |
 | `mcp-builder` / `claude-api` | Apache 2.0 (anthropics/skills, LICENSE.txt kept in-dir) |
 | other upstream beans | see each origin's LICENSE |
 
