@@ -1,6 +1,6 @@
 ---
 name: readme-makeover
-description: Transform a bland, generic, or AI-templated project README into a distinctive, branded, professional landing page — a visual hero (animated SVG banner), a memorable brand metaphor mined from the project name, shields.io badges, a strong scannable structure (highlights → install → usage → catalog → license), and optional bilingual + LICENSE/.gitattributes. Use whenever a README looks generic or needs a creative/visual upgrade, or the user says '美化/重做 README' / 'README 太普通/不够酷/不够专业/不够前卫' / 'make my README look better' / 'redesign the README' / wants badges or a banner. Works for open-source, personal, and work repos.
+description: Transform a bland, generic, or AI-templated project README into a distinctive, branded, professional landing page — a visual hero (animated SVG banner), a memorable brand metaphor mined from the project name, shields.io badges, a consistent SVG icon system for section headers (one family, one brand color — no emoji-as-icons), a strong scannable structure (highlights → install → usage → catalog → license), and optional bilingual + LICENSE/.gitattributes. Use whenever a README looks generic or needs a creative/visual upgrade, or the user says '美化/重做 README' / 'README 太普通/不够酷/不够专业/不够前卫' / 'make my README look better' / 'redesign the README' / wants badges, a banner, or better icons, or complains the README or its icons look AI-generated ('图标过于AI化'). Works for open-source, personal, and work repos.
 ---
 
 # README Makeover
@@ -35,6 +35,7 @@ Key points:
 - One `assets/banner.svg`, embedded via `<p align="center"><img src="assets/banner.svg" width="960"></p>`
 - On-brand (metaphor object + wordmark), ~960×260–320
 - Animate subtly (steam, pulse, draw-in). **Animation is a bonus — the design must hold up static**, because GitHub sanitizes SVG and may freeze SMIL.
+- The accent color you pick here also drives the icon system (see [references/icons.md](references/icons.md)) — one palette across banner, badges, and icons.
 
 ### 4. Add badges (≤ ~6)
 shields.io static + dynamic badges under the hero. Pick a tight set: a scope/count badge, a platform or license badge, last-commit, stars, PRs-welcome. More than ~6 reads as noise and pushes content down.
@@ -56,10 +57,11 @@ Canonical order (rename sections to fit the metaphor):
 12. Footer (Star CTA + author)
 
 ### 6. Creative devices (sparingly — they compound)
-- **Rating scales** tied to the metaphor (☕ strength, 🔥 heat, ⚡ speed): playful + information-dense
-- **Themed headers** (`☕ 今日特调`, `🧪 萃取一杯`) over boring "Installation"
+- **An icon system** for section headers and key table labels — one family, one stroke, one brand color. See [references/icons.md](references/icons.md). This is what makes a README read as hand-designed; **emoji as section icons is the #1 AI tell — never do it**.
+- **Rating scales** tied to the metaphor (☕ strength, 🔥 heat, ⚡ speed): playful + information-dense — the one legitimate use of emoji
+- **Themed headers** (rename to the metaphor's vocabulary, e.g. `今日特调` for "Signature") over boring "Installation" — pair with an icon from the system, never with emoji
 - **Terminal-style** install blocks with commented, barista-style steps
-- **Emoji dividers** (`┈┈┈┈ ☕ ┈┈┈┈`)
+- **Subtle dividers** (`┈┈┈┈ ┈┈┈┈`) — plain, or with a single small brand glyph in the footer only
 
 ### 7. Never drop the must-haves
 Style is worthless without: a copy-pasteable quick start, an install-location table for the target tools, attribution + licenses for upstream/borrowed assets, and (for shared repos) a `LICENSE` + `.gitattributes`.
@@ -68,7 +70,7 @@ Style is worthless without: a copy-pasteable quick start, an install-location ta
 Mirror an English `README.en.md` and put a language switcher at the top of **both** files. Keep structure identical so they stay in sync; don't let one drift.
 
 ## Worked example
-`latte-skills` (a personal skills repo) was rebuilt around a **coffee-shop** theme mined from the name "latte": an animated SVG banner of a latte cup with rising steam, skills reframed as "brews" with ☕ strength ratings, install as "brew a cup", upstream sources as "origin/estate". The same content became more memorable *and* easier to scan. Reference, not a template — your metaphor will differ.
+`latte-skills` (a personal skills repo) was rebuilt around a **coffee-shop** theme mined from the name "latte": an animated SVG banner of a latte cup with rising steam, skills reframed as "brews" with ☕ strength ratings, install as "brew a cup", upstream sources as "origin/estate", and a 12-glyph icon set (single 1.5 stroke, brand gold `#c98f2c`) replacing emoji in section headers. The same content became more memorable *and* easier to scan. Reference, not a template — your metaphor will differ.
 
 ## Quick reference — what every great README has
 | Must-have | Why |
@@ -88,6 +90,8 @@ Mirror an English `README.en.md` and put a language switcher at the top of **bot
 - **Restyling but dropping quick start / license** → useless pretty page
 - **Animation that only works off-GitHub** → design must hold static (see references)
 - **Bilingual files that drift** → keep structure identical, sync both
+- **Emoji as section icons** (`## 🚀 Quick Start`) → instant AI-Generated look; use the icon system or plain headers (see references/icons.md)
+- **Mixed icon families** (emoji + two SVG styles + mismatched brand logos in one file) → one family, one stroke, one color
 
 ## When to stop
 Stop when the README is scannable, on-brand, and every must-have is present — not when it's "maximal". More badges and bigger art past that point is diminishing returns.

@@ -99,7 +99,7 @@ cp -r latte-skills/frontend/frontend-design ~/.zcode/skills/
 
 | 拼配 | 浓度 | 风味 |
 |---|:---:|---|
-| **readme-makeover** | ☕☕ | 把平庸/模板化的 README 改造成有品牌、有主视觉、可扫读的落地页：挖品牌隐喻 → 动画 SVG 招牌 → 徽章 → 强结构 → LICENSE/.gitattributes。详见 `general/readme-makeover/`（本 README 即由它出品 ☕） |
+| **readme-makeover** | ☕☕ | 把平庸/模板化的 README 改造成有品牌、有主视觉、可扫读的落地页：挖品牌隐喻 → 动画 SVG 招牌 → 徽章 → 反 AI 味图标系统 → 强结构 → LICENSE/.gitattributes。详见 `general/readme-makeover/`（本 README 即由它出品 ☕） |
 
 ### <img src="assets/icons/shield-check.svg" width="16"> `quality/` — 质量与验证（6 杯）
 

@@ -99,7 +99,7 @@ cp -r latte-skills/frontend/frontend-design ~/.zcode/skills/
 
 | Blend | Strength | Flavor |
 |---|:---:|---|
-| **readme-makeover** | ☕☕ | Turn a bland/templated README into a branded, hero-led, scannable landing page: mine a brand metaphor → animated SVG banner → badges → strong structure → LICENSE/.gitattributes. See `general/readme-makeover/` (this very README was brewed with it ☕) |
+| **readme-makeover** | ☕☕ | Turn a bland/templated README into a branded, hero-led, scannable landing page: mine a brand metaphor → animated SVG banner → badges → anti-AI-tell icon system → strong structure → LICENSE/.gitattributes. See `general/readme-makeover/` (this very README was brewed with it ☕) |
 
 ### <img src="assets/icons/shield-check.svg" width="16"> `quality/` — Quality & Verification (6 brews)
 
